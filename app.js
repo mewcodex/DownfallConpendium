@@ -99,14 +99,16 @@ const uiText = {
   },
 };
 
-const notInPoolCardIds = new Set([
-  "Slimebound:SplitGreed",
-  "Slimebound:SplitScrap",
-  "expansioncontent:SuperViciousMockery",
-  "Gremlin:Bang",
-  "guardian:SecondStrike",
-  "guardian:SecondStrikePreviewCard",
-]);
+function isNotInPoolCard(card) {
+  return Boolean(card && card.notInPool);
+}
+
+function getNotInPoolBadgeText(card) {
+  if (card && card.color === "COLLECTIBLE") {
+    return state.lang === "zh" ? "无法获得" : "Unobtainable";
+  }
+  return i18n("notInPool");
+}
 
 const elements = {
   langToggle: document.getElementById("langToggle"),
@@ -1196,8 +1198,8 @@ function buildCardInnerHtml(card, descriptionHtml, options = {}) {
     : `${typeTagHtml}
         ${card.rarity ? `<span class="${getRarityTagClass(card.rarity)}">${localizeRarity(card.rarity)}</span>` : ""}
         ${card.color ? `<span class="tag tag-color"${colorTagStyle}>${localizeColor(card)}</span>` : ""}`;
-  const notInPoolBadge = notInPoolCardIds.has(card.id)
-    ? `<span class="card-flag-not-in-pool">${i18n("notInPool")}</span>`
+  const notInPoolBadge = isNotInPoolCard(card)
+    ? `<span class="card-flag-not-in-pool">${getNotInPoolBadgeText(card)}</span>`
     : "";
 
   return `
