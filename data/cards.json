@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T00:20:16.793428Z",
+  "generatedAt": "2026-04-28T11:23:15.926059Z",
   "cardCount": 992,
   "cards": [
     {
@@ -18159,10 +18159,12 @@
         "slime": null
       },
       "tokenValues": {
-        "M": 4
+        "M": 4,
+        "D": 4
       },
       "upgradeTokenValues": {
-        "M": 6
+        "M": 6,
+        "D": 6
       },
       "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
@@ -21061,8 +21063,55 @@
       "deprecated": false,
       "usesUpgradeDescription": false,
       "isAfterlifeCard": false,
-      "references": [],
-      "previewReferences": []
+      "references": [
+        "awakened:Crusher",
+        "awakened:Daggerstorm",
+        "awakened:ManaShield",
+        "awakened:Minniegun",
+        "awakened:Mantis",
+        "awakened:Scheme",
+        "awakened:SignInBlood",
+        "awakened:SpreadingSpores",
+        "awakened:TheEncyclopedia"
+      ],
+      "previewReferences": [
+        {
+          "id": "awakened:Crusher",
+          "upgraded": false
+        },
+        {
+          "id": "awakened:Daggerstorm",
+          "upgraded": false
+        },
+        {
+          "id": "awakened:ManaShield",
+          "upgraded": false
+        },
+        {
+          "id": "awakened:Minniegun",
+          "upgraded": false
+        },
+        {
+          "id": "awakened:Mantis",
+          "upgraded": false
+        },
+        {
+          "id": "awakened:Scheme",
+          "upgraded": false
+        },
+        {
+          "id": "awakened:SignInBlood",
+          "upgraded": false
+        },
+        {
+          "id": "awakened:SpreadingSpores",
+          "upgraded": false
+        },
+        {
+          "id": "awakened:TheEncyclopedia",
+          "upgraded": false
+        }
+      ]
     },
     {
       "id": "awakened:Rebirth",
