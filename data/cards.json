@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-29T03:31:13.617843Z",
+  "generatedAt": "2026-04-29T04:17:19.707803Z",
   "cardCount": 992,
   "cards": [
     {
@@ -17540,7 +17540,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -17600,7 +17600,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -18651,7 +18651,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -19046,7 +19046,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -19488,7 +19488,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [
         "awakened:PlumeJab"
@@ -19963,7 +19963,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -20023,7 +20023,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -20360,7 +20360,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -20616,7 +20616,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -20812,7 +20812,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -20872,7 +20872,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -21071,7 +21071,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -21626,7 +21626,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -21690,7 +21690,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": true,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
@@ -22856,7 +22856,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [
         "awakened:Ceremony"
@@ -23187,7 +23187,7 @@
       "colorPillFg": null,
       "deprecated": false,
       "notInPool": false,
-      "usesUpgradeDescription": false,
+      "usesUpgradeDescription": true,
       "isAfterlifeCard": false,
       "references": [],
       "previewReferences": []
