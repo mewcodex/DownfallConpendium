@@ -19,9 +19,6 @@
           <p class="eyebrow" data-i18n="eyebrow">Downfall Mod Card Showcase</p>
           <div class="hero-title-row">
             <h1 data-i18n="title">Downfall Card Conpendium</h1>
-            <div class="hero-actions">
-              <button class="toggle" id="langToggle" type="button">EN</button>
-            </div>
           </div>
           <p class="subtitle" data-i18n="subtitle">
             Browse every card, filter by stats, and switch between base and upgraded text.
@@ -30,11 +27,6 @@
       </header>
 
       <section class="controls">
-        <label class="search">
-          <span data-i18n="searchLabel">Search</span>
-          <input id="searchInput" type="search" placeholder="Card name or description" />
-        </label>
-
         <div class="selects">
           <label>
             <span data-i18n="typeLabel">Type</span>
@@ -72,6 +64,23 @@
             <select id="deprecatedFilter"></select>
           </label>
         </div>
+
+        <div class="search-block">
+          <label class="search">
+            <span data-i18n="searchLabel">Search</span>
+            <div class="search-input-row">
+              <div class="search-input-wrap">
+                <input id="searchInput" type="search" placeholder="Card name or description" />
+                <button class="search-clear-inline" id="clearSearchInlineBtn" type="button" aria-label="Clear search" title="Clear search">
+                  <svg class="icon-close" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                    <path d="M4 4L12 12M12 4L4 12" />
+                  </svg>
+                </button>
+              </div>
+              <button class="search-btn" id="searchBtn" type="button" data-i18n="searchBtn">Search</button>
+            </div>
+          </label>
+        </div>
       </section>
 
       <section class="summary" id="summary"></section>
@@ -83,8 +92,13 @@
         <div id="pageInfo"></div>
         <button id="nextPage" type="button">Next</button>
       </footer>
+
+      <div class="translator-entry">
+        <a id="translatorModeEntry" href="?translator_mode=1">translator mode</a>
+      </div>
     </div>
 
+    <button class="toggle floating-toggle" id="langToggle" type="button">EN</button>
     <button class="toggle floating-toggle" id="upgradeToggle" type="button" data-i18n="toggleUpgrade">Show Upgraded</button>
 
     <script src="app.js"></script>

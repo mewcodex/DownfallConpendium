@@ -34,6 +34,8 @@ const state = {
   page: 1,
   pageSize: 24,
   suppressNextCardAnimation: false,
+  filteredSorted: [],
+  translatorMode: false,
 };
 
 const uiText = {
@@ -66,6 +68,8 @@ const uiText = {
     deprecatedExclude: "Exclude deprecated",
     unplayable: "Unplayable",
     notInPool: "not in the pool",
+    searchBtn: "Search",
+    clearSearch: "Clear",
   },
   zh: {
     eyebrow: "崩坠 Mod 卡牌展示",
@@ -96,6 +100,8 @@ const uiText = {
     deprecatedExclude: "排除弃用",
     unplayable: "不可打出",
     notInPool: "不在卡池中",
+    searchBtn: "搜索",
+    clearSearch: "清除",
   },
 };
 
@@ -114,6 +120,8 @@ const elements = {
   langToggle: document.getElementById("langToggle"),
   upgradeToggle: document.getElementById("upgradeToggle"),
   searchInput: document.getElementById("searchInput"),
+  searchBtn: document.getElementById("searchBtn"),
+  clearSearchInlineBtn: document.getElementById("clearSearchInlineBtn"),
   typeFilter: document.getElementById("typeFilter"),
   costFilter: document.getElementById("costFilter"),
   rarityFilter: document.getElementById("rarityFilter"),
@@ -131,6 +139,42 @@ const elements = {
 
 function i18n(key) {
   return uiText[state.lang][key];
+}
+
+function withTempLang(lang, callback) {
+  if (lang !== "en" && lang !== "zh") {
+    return callback();
+  }
+  const prevLang = state.lang;
+  state.lang = lang;
+  try {
+    return callback();
+  } finally {
+    state.lang = prevLang;
+  }
+}
+
+function getCardRenderLang(cardNode) {
+  return cardNode && cardNode.dataset && cardNode.dataset.renderLang === "zh" ? "zh" : "en";
+}
+
+function updateTranslatorEntryLink() {
+  const link = document.getElementById("translatorModeEntry");
+  if (!link) return;
+  const params = new URLSearchParams(window.location.search || "");
+  if (state.translatorMode) {
+    params.delete("translator_mode");
+    link.textContent = "exit translator mode";
+  } else {
+    params.set("translator_mode", "1");
+    link.textContent = "translator mode";
+  }
+  link.href = `${window.location.pathname}?${params.toString()}`;
+}
+
+function updateInlineClearVisibility() {
+  const hasValue = Boolean((elements.searchInput.value || "").length);
+  elements.clearSearchInlineBtn.classList.toggle("visible", hasValue);
 }
 
 function escapeRegExp(text) {
@@ -507,7 +551,13 @@ function highlightReferencedCardNamesByMetadata(text, sourceCard) {
   (sourceCard.previewReferences || []).forEach((item) => {
     if (item && typeof item === "object") pushId(item.id);
   });
-  (sourceCard.references || []).forEach((id) => pushId(id));
+  (sourceCard.references || []).forEach((item) => {
+    if (item && typeof item === "object") {
+      pushId(item.id);
+      return;
+    }
+    pushId(item);
+  });
 
   const refNames = refIds
     .map((id) => {
@@ -642,11 +692,11 @@ function formatTooltipDescriptionText(rawText, cardContext) {
   return text;
 }
 
-function showKeywordTooltip(entry, anchorRect, cardContext) {
+function showKeywordTooltip(entry, anchorRect, cardContext, langOverride = null) {
   if (!entry || !entry.description) return;
   const tip = getKeywordTooltip();
-  const name = escapeHtml(entry.name || "");
-  const desc = formatTooltipDescriptionText(entry.description || "", cardContext);
+  const name = withTempLang(langOverride, () => escapeHtml(entry.name || ""));
+  const desc = withTempLang(langOverride, () => formatTooltipDescriptionText(entry.description || "", cardContext));
 
   tip.innerHTML = `
     <div class="kw-tip-name">${name}</div>
@@ -689,12 +739,12 @@ function getCardPreviewTooltip() {
   return tip;
 }
 
-function showCardPreviewTooltip(card, anchorRect) {
+function showCardPreviewTooltip(card, anchorRect, langOverride = null) {
   if (!card) return;
   const tip = getCardPreviewTooltip();
   tip.classList.remove("refs-panel");
   tip.classList.remove("preview-left", "preview-right");
-  const previewCardEl = buildCardElement(card, true, true);
+  const previewCardEl = langOverride ? buildCardElementInLang(card, langOverride, true, true) : buildCardElement(card, true, true);
   tip.innerHTML = "";
   tip.appendChild(previewCardEl);
 
@@ -720,7 +770,7 @@ function showCardPreviewTooltip(card, anchorRect) {
   tip.style.top = `${Math.max(window.scrollY + margin, top)}px`;
 }
 
-function showCardReferencePreview(refEntries, anchorRect) {
+function showCardReferencePreview(refEntries, anchorRect, langOverride = null) {
   if (!refEntries || !refEntries.length) return;
   const tip = getCardPreviewTooltip();
   tip.classList.add("refs-panel");
@@ -730,7 +780,11 @@ function showCardReferencePreview(refEntries, anchorRect) {
     const card = entry && typeof entry === "object" ? entry.card : entry;
     const upgraded = Boolean(entry && typeof entry === "object" && entry.upgraded);
     if (!card) return;
-    tip.appendChild(buildCardElement(card, true, true, { forceUpgrade: upgraded }));
+    if (langOverride) {
+      tip.appendChild(buildCardElementInLang(card, langOverride, true, true, { forceUpgrade: upgraded }));
+    } else {
+      tip.appendChild(buildCardElement(card, true, true, { forceUpgrade: upgraded }));
+    }
   });
 
   tip.classList.add("show");
@@ -775,14 +829,15 @@ function bindKeywordTooltipEvents() {
     }
     const alias = (kw.dataset.kwAlias || "").trim();
     const label = alias || (kw.textContent || "").trim();
-    const entry = findKeywordEntry(label) || getHardcodedKeywordEntry(label);
+    const cardNode = kw.closest("article.card[data-card-id]");
+    const renderLang = getCardRenderLang(cardNode);
+    const entry = withTempLang(renderLang, () => findKeywordEntry(label) || getHardcodedKeywordEntry(label));
     if (!entry || !entry.description) {
       hideKeywordTooltip();
       return;
     }
-    const cardNode = kw.closest("article.card[data-card-id]");
     const cardContext = cardNode ? state.cardById.get(cardNode.dataset.cardId || "") : null;
-    showKeywordTooltip(entry, kw.getBoundingClientRect(), cardContext || null);
+    showKeywordTooltip(entry, kw.getBoundingClientRect(), cardContext || null, renderLang);
   });
 
   elements.grid.addEventListener("mouseout", (event) => {
@@ -807,6 +862,7 @@ function bindCardReferencePreviewEvents() {
       return;
     }
     const card = state.cardById.get(cardNode.dataset.cardId || "");
+    const renderLang = getCardRenderLang(cardNode);
     if (!card) {
       hideCardPreviewTooltip();
       return;
@@ -827,15 +883,22 @@ function bindCardReferencePreviewEvents() {
     const refEntries = previewRefEntries.length
       ? previewRefEntries
       : (card.references || [])
-          .map((id) => state.cardById.get(id))
-          .filter(Boolean)
-          .map((refCard) => ({ card: refCard, upgraded: false }));
+          .map((item) => {
+            const isObjectEntry = item && typeof item === "object";
+            const refCard = state.cardById.get(isObjectEntry ? (item.id || "") : item);
+            if (!refCard) return null;
+            return {
+              card: refCard,
+              upgraded: Boolean(isObjectEntry && item.upgraded) && sourceCardUpgradedInView,
+            };
+          })
+          .filter(Boolean);
 
     if (!refEntries.length) {
       hideCardPreviewTooltip();
       return;
     }
-    showCardReferencePreview(refEntries, cardNode.getBoundingClientRect());
+    showCardReferencePreview(refEntries, cardNode.getBoundingClientRect(), renderLang);
   });
 
   elements.grid.addEventListener("mouseout", (event) => {
@@ -933,7 +996,10 @@ function applyI18n() {
     }
   });
 
-  elements.langToggle.textContent = state.lang.toUpperCase();
+  elements.langToggle.textContent = state.translatorMode ? "translator mode" : state.lang.toUpperCase();
+  elements.langToggle.style.display = "";
+  elements.langToggle.disabled = Boolean(state.translatorMode);
+  elements.langToggle.classList.toggle("translator-mode-pill", Boolean(state.translatorMode));
   elements.upgradeToggle.textContent = state.showUpgrade ? i18n("toggleBase") : i18n("toggleUpgrade");
   elements.searchInput.placeholder = state.lang === "zh" ? "卡名或描述" : "Card name or description";
 }
@@ -986,6 +1052,7 @@ function hasAnyNumericStatChange(card) {
 
 function hasCardUpgradeableVariant(card) {
   if (!card) return false;
+  if (card.canUpgrade === false) return false;
   if (typeof card.cost === "number" && typeof card.upgradeCost === "number" && card.cost !== card.upgradeCost) {
     return true;
   }
@@ -1011,11 +1078,30 @@ function buildSearchableDescription(card) {
   return text;
 }
 
+function buildSearchableDescriptionForLang(card, lang) {
+  const prevLang = state.lang;
+  state.lang = lang;
+  try {
+    return buildSearchableDescription(card);
+  } finally {
+    state.lang = prevLang;
+  }
+}
+
 function matchesSearch(card) {
   if (!state.search) return true;
   const search = normalizeSearchText(state.search);
-  const name = normalizeSearchText(card.name[state.lang] || "");
   const id = normalizeSearchText(card.id || "");
+
+  if (state.translatorMode) {
+    const nameEn = normalizeSearchText((card.name || {}).en || "");
+    const nameZh = normalizeSearchText((card.name || {}).zh || "");
+    const descEn = normalizeSearchText(buildSearchableDescriptionForLang(card, "en"));
+    const descZh = normalizeSearchText(buildSearchableDescriptionForLang(card, "zh"));
+    return id.includes(search) || nameEn.includes(search) || nameZh.includes(search) || descEn.includes(search) || descZh.includes(search);
+  }
+
+  const name = normalizeSearchText(card.name[state.lang] || "");
   const desc = normalizeSearchText(buildSearchableDescription(card));
   return name.includes(search) || id.includes(search) || desc.includes(search);
 }
@@ -1372,12 +1458,17 @@ function readStateFromUrl() {
   const sortDir = params.get("sortDir");
   const size = params.get("size");
   const page = params.get("page");
+  const translatorMode = params.get("translator_mode");
 
   if (lang === "zh" || lang === "en") {
     state.lang = lang;
   }
   if (upgraded !== null) {
     state.showUpgrade = upgraded === "1" || upgraded === "true";
+  }
+  if (translatorMode !== null) {
+    const normalized = String(translatorMode).toLowerCase();
+    state.translatorMode = normalized === "1" || normalized === "true" || normalized === "yes";
   }
 
   state.search = (q || "").trim();
@@ -1398,6 +1489,7 @@ function readStateFromUrl() {
 
 function syncControlsFromState() {
   elements.searchInput.value = state.search;
+  updateInlineClearVisibility();
   elements.upgradeToggle.classList.toggle("active", state.showUpgrade);
 }
 
@@ -1414,6 +1506,7 @@ function writeStateToUrl() {
   if (state.filters.deprecated) params.set("deprecated", state.filters.deprecated);
   if (state.sort.by) params.set("sortBy", state.sort.by);
   if (state.sort.dir === "desc") params.set("sortDir", "desc");
+  if (state.translatorMode) params.set("translator_mode", "1");
   if (state.pageSize !== 24) params.set("size", String(state.pageSize));
   if (state.page > 1) params.set("page", String(state.page));
 
@@ -1423,6 +1516,7 @@ function writeStateToUrl() {
   if (nextUrl !== currentUrl) {
     window.history.replaceState(null, "", nextUrl);
   }
+  updateTranslatorEntryLink();
 }
 
 function updateSummary(shown, total) {
@@ -1433,6 +1527,35 @@ function updatePagination(totalPages) {
   elements.pageInfo.textContent = `${state.page} / ${totalPages || 1}`;
   elements.prevPage.disabled = state.page <= 1;
   elements.nextPage.disabled = state.page >= totalPages;
+}
+
+function buildCardElementInLang(card, lang, suppressAnimation = false, previewMode = false, options = {}) {
+  const prevLang = state.lang;
+  state.lang = lang;
+  try {
+    const el = buildCardElement(card, suppressAnimation, previewMode, options);
+    el.dataset.renderLang = lang;
+    return el;
+  } finally {
+    state.lang = prevLang;
+  }
+}
+
+function appendCardElements(slice, suppressAnimation) {
+  if (!state.translatorMode) {
+    slice.forEach((card) => {
+      const cardEl = buildCardElement(card, suppressAnimation, false);
+      elements.grid.appendChild(cardEl);
+    });
+    return;
+  }
+
+  slice.forEach((card) => {
+    const enEl = buildCardElementInLang(card, "en", suppressAnimation, false);
+    const zhEl = buildCardElementInLang(card, "zh", suppressAnimation, false);
+    elements.grid.appendChild(enEl);
+    elements.grid.appendChild(zhEl);
+  });
 }
 
 function renderCards() {
@@ -1451,6 +1574,8 @@ function renderCards() {
     .filter((card) => matchesDeprecated(card))
     .sort(compareCardsBySort);
 
+  state.filteredSorted = filtered;
+
   const total = filtered.length;
   const totalPages = Math.ceil(total / state.pageSize) || 1;
   if (state.page > totalPages) state.page = totalPages;
@@ -1463,10 +1588,7 @@ function renderCards() {
   if (!slice.length) {
     elements.grid.innerHTML = `<div class="card">\n      <div class="card-body">${i18n("noResults")}</div>\n    </div>`;
   } else {
-    slice.forEach((card) => {
-      const cardEl = buildCardElement(card, suppressAnimation, false);
-      elements.grid.appendChild(cardEl);
-    });
+    appendCardElements(slice, suppressAnimation);
   }
 
   updateSummary(slice.length, total);
@@ -1474,13 +1596,50 @@ function renderCards() {
   writeStateToUrl();
 }
 
+function renderCurrentPage() {
+  if (!state.data) return;
+  hideKeywordTooltip();
+  hideCardPreviewTooltip();
+  const suppressAnimation = state.suppressNextCardAnimation;
+  state.suppressNextCardAnimation = false;
+
+  const filtered = state.filteredSorted;
+  const total = filtered.length;
+  const totalPages = Math.ceil(total / state.pageSize) || 1;
+  if (state.page > totalPages) state.page = totalPages;
+
+  const start = (state.page - 1) * state.pageSize;
+  const slice = filtered.slice(start, start + state.pageSize);
+
+  elements.grid.innerHTML = "";
+
+  if (!slice.length) {
+    elements.grid.innerHTML = `<div class="card">\n      <div class="card-body">${i18n("noResults")}</div>\n    </div>`;
+  } else {
+    appendCardElements(slice, suppressAnimation);
+  }
+
+  updateSummary(slice.length, total);
+  updatePagination(totalPages);
+  writeStateToUrl();
+}
+
+function triggerSearch() {
+  state.search = elements.searchInput.value.trim();
+  state.page = 1;
+  renderCards();
+}
+
 function bindEvents() {
-  elements.langToggle.addEventListener("click", () => {
-    state.lang = state.lang === "en" ? "zh" : "en";
-    applyI18n();
-    buildOptions();
-    renderCards();
-  });
+  if (!state.translatorMode) {
+    elements.langToggle.addEventListener("click", () => {
+      state.lang = state.lang === "en" ? "zh" : "en";
+      state.suppressNextCardAnimation = true;
+      applyI18n();
+      buildOptions();
+      renderCurrentPage();
+    });
+  }
 
   elements.upgradeToggle.addEventListener("click", () => {
     state.showUpgrade = !state.showUpgrade;
@@ -1490,10 +1649,25 @@ function bindEvents() {
     renderCards();
   });
 
-  elements.searchInput.addEventListener("input", (event) => {
-    state.search = event.target.value.trim();
+  elements.searchBtn.addEventListener("click", () => {
+    triggerSearch();
+  });
+
+  elements.searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") triggerSearch();
+  });
+
+  elements.searchInput.addEventListener("input", () => {
+    updateInlineClearVisibility();
+  });
+
+  elements.clearSearchInlineBtn.addEventListener("click", () => {
+    elements.searchInput.value = "";
+    state.search = "";
+    updateInlineClearVisibility();
     state.page = 1;
     renderCards();
+    elements.searchInput.focus();
   });
 
   elements.typeFilter.addEventListener("change", (event) => {
@@ -1581,6 +1755,7 @@ async function init() {
   applyI18n();
   buildOptions();
   syncControlsFromState();
+  updateTranslatorEntryLink();
   renderCards();
   bindEvents();
 }
