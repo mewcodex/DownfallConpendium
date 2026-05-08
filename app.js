@@ -779,11 +779,14 @@ function showCardReferencePreview(refEntries, anchorRect, langOverride = null) {
   refEntries.forEach((entry) => {
     const card = entry && typeof entry === "object" ? entry.card : entry;
     const upgraded = Boolean(entry && typeof entry === "object" && entry.upgraded);
+    const descSuffix = (entry && typeof entry === "object" && entry.descriptionSuffix)
+      ? (entry.descriptionSuffix[langOverride || state.lang] || null)
+      : null;
     if (!card) return;
     if (langOverride) {
-      tip.appendChild(buildCardElementInLang(card, langOverride, true, true, { forceUpgrade: upgraded }));
+      tip.appendChild(buildCardElementInLang(card, langOverride, true, true, { forceUpgrade: upgraded, descriptionSuffix: descSuffix }));
     } else {
-      tip.appendChild(buildCardElement(card, true, true, { forceUpgrade: upgraded }));
+      tip.appendChild(buildCardElement(card, true, true, { forceUpgrade: upgraded, descriptionSuffix: descSuffix }));
     }
   });
 
@@ -890,6 +893,7 @@ function bindCardReferencePreviewEvents() {
             return {
               card: refCard,
               upgraded: Boolean(isObjectEntry && item.upgraded) && sourceCardUpgradedInView,
+              descriptionSuffix: isObjectEntry ? (item.descriptionSuffix || null) : null,
             };
           })
           .filter(Boolean);
@@ -1238,6 +1242,9 @@ function renderDescription(card, options = {}) {
 function renderDescriptionForPreview(card, options = {}) {
   const useUpgrade = options.forceUpgrade ?? state.showUpgrade;
   let text = resolveCardBaseDescription(card, useUpgrade);
+  if (options.descriptionSuffix) {
+    text = text + options.descriptionSuffix;
+  }
   text = normalizeDescriptionSpacing(text);
   text = fillNumericTokens(text, card, useUpgrade);
   text = finalizeFilledTokenSpacing(text);
@@ -1334,6 +1341,7 @@ function buildCardElement(card, suppressAnimation = false, previewMode = false, 
     cardEl.style.setProperty("--rarity-glow", rarityGlow);
   }
   cardEl.dataset.cardId = card.id;
+  cardEl.dataset.renderLang = state.lang;
   const desc = previewMode ? renderDescriptionForPreview(card, options) : renderDescription(card, options);
   cardEl.innerHTML = buildCardInnerHtml(card, desc, options);
   return cardEl;

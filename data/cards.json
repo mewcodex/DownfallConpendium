@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-06T22:27:04.179642Z",
+  "generatedAt": "2026-05-08T00:35:36.032074Z",
   "cardCount": 992,
   "cards": [
     {
@@ -35705,7 +35705,11 @@
       "references": [
         {
           "id": "hexamod:Strike",
-          "upgraded": false
+          "upgraded": false,
+          "descriptionSuffix": {
+            "zh": " NL 获得 champ:技术 奖励。",
+            "en": " NL Trigger *Stance *Skill champ:Bonus."
+          }
         }
       ],
       "previewReferences": []
