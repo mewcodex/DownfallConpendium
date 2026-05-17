@@ -80,15 +80,17 @@ const rarityLabelMap = {
     BOSS: "Boss",
     STARTER: "Starter",
     SPECIAL: "Special",
+    DEPRECATED: "Deprecated",
   },
   zh: {
     COMMON: "普通",
     UNCOMMON: "罕见",
     RARE: "稀有",
     SHOP: "商店",
-    BOSS: "Boss",
+    BOSS: "首领",
     STARTER: "初始",
     SPECIAL: "特殊",
+    DEPRECATED: "弃用",
   },
 };
 
@@ -192,8 +194,10 @@ function escapeHtml(text) {
 
 function normalizeDescText(text) {
   const normalized = (text || "")
-    .replace(/\[REMOVE_SPACE\]/g, "")
-    .replace(/#[ybrgp]/g, "")
+    .replace(/\s*\[REMOVE_SPACE\]\s*/g, "")
+    .replace(/#b\s*([^\s]+)/g, "[[BLUE:$1]]")
+    .replace(/#r\s*([^\s]+)/g, "[[RED:$1]]")
+    .replace(/#[ygp]/g, "")
     .replace(/\s+/g, " ")
     .trim();
 
@@ -204,6 +208,58 @@ function normalizeDescText(text) {
   }
 
   return normalized;
+}
+
+function renderLegacyBlueMarkers(text) {
+  if (!text) return "";
+  const renderColoredToken = (token, cls) => {
+    const raw = String(token || "").trim();
+    const namespaced = /^([A-Za-z_]\w*):(.+)$/.exec(raw);
+    if (namespaced) {
+      const alias = raw;
+      const label = (namespaced[2] || "").replace(/_/g, " ").trim() || raw;
+      return `<span class="kw ${cls}" data-kw-alias="${escapeHtml(alias)}">${escapeHtml(label)}</span>`;
+    }
+    return `<span class="${cls}">${raw}</span>`;
+  };
+
+  return text
+    .replace(/\[\[BLUE:([^\]]+)\]\]/g, (_full, token) => renderColoredToken(token, "kw-mark-blue"))
+    .replace(/\[\[RED:([^\]]+)\]\]/g, (_full, token) => renderColoredToken(token, "kw-mark-red"));
+}
+
+function renderEnergyToken(text, energyIcon) {
+  if (!text) return "";
+  if (!energyIcon) return text;
+  const iconHtml = `<span class="energy-token"><img src="${escapeHtml(energyIcon)}" alt="E" loading="lazy"></span>`;
+  return text.replace(/\[E\]/g, iconHtml);
+}
+
+function renderBracketColorSyntax(text) {
+  if (!text) return "";
+  const tokenRe = /\[#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\]|\[\]/g;
+  let out = "";
+  let last = 0;
+  let openCount = 0;
+  let match;
+
+  while ((match = tokenRe.exec(text)) !== null) {
+    out += text.slice(last, match.index);
+    if (match[1]) {
+      out += `<span class="inline-color" style="color:#${match[1]}">`;
+      openCount += 1;
+    } else if (openCount > 0) {
+      out += "</span>".repeat(openCount);
+      openCount = 0;
+    }
+    last = tokenRe.lastIndex;
+  }
+
+  out += text.slice(last);
+  if (openCount > 0) {
+    out += "</span>".repeat(openCount);
+  }
+  return out;
 }
 
 function finalizeZhHtmlSpacing(html) {
@@ -227,7 +283,31 @@ function localizeRarity(rarity) {
 
 function localizeColor(relic) {
   if (relic && relic.colorName && relic.colorName[state.lang]) return relic.colorName[state.lang];
-  return relic.color || "";
+  const color = relic && relic.color;
+  if (!color) return "";
+  const colorMap = {
+    BOSS: { en: "Boss", zh: "首领" },
+    COLLECTIBLE: { en: "Collectible", zh: "藏品" },
+    COLORLESS: { en: "Colorless", zh: "无色" },
+    CURSE: { en: "Curse", zh: "诅咒" },
+  };
+  const mapped = colorMap[color];
+  if (mapped) return mapped[state.lang] || color;
+  return color;
+}
+
+function localizeCardType(type) {
+  if (!type) return "";
+  const typeMap = {
+    ATTACK: { en: "Attack", zh: "攻击" },
+    SKILL: { en: "Skill", zh: "技能" },
+    POWER: { en: "Power", zh: "能力" },
+    STATUS: { en: "Status", zh: "状态" },
+    CURSE: { en: "Curse", zh: "诅咒" },
+  };
+  const mapped = typeMap[type];
+  if (!mapped) return type;
+  return mapped[state.lang] || type;
 }
 
 function getRarityTagClass(rarity) {
@@ -269,16 +349,44 @@ function buildKeywordIndex() {
   const base = (state.relicData && state.relicData.baseKeywords) || [];
   const terms = { en: new Set(), zh: new Set() };
   base.forEach((entry) => {
-    if (entry && entry.en && entry.en.aliases) entry.en.aliases.forEach((k) => k && terms.en.add(k));
+    if (entry && entry.en && entry.en.aliases) {
+      entry.en.aliases.forEach((k) => {
+        if (!k) return;
+        const raw = String(k).trim();
+        if (!raw) return;
+        terms.en.add(raw);
+        const underscored = raw.replace(/\s+/g, "_");
+        const spaced = raw.replace(/_/g, " ").replace(/\s+/g, " ").trim();
+        if (underscored) terms.en.add(underscored);
+        if (spaced) terms.en.add(spaced);
+      });
+    }
     if (entry && entry.zh && entry.zh.aliases) entry.zh.aliases.forEach((k) => k && terms.zh.add(k));
   });
+
+  // Include keyword aliases that differ by spaces/underscores (e.g. Temporary HP/Temporary_HP)
+  // so localized text that uses underscores can still be highlighted.
+  const enKeywordMap = state.keywordByLang.en || new Map();
+  for (const alias of enKeywordMap.keys()) {
+    const raw = String(alias || "").trim();
+    if (!raw) continue;
+    if (!raw.includes(" ") && !raw.includes("_")) continue;
+    terms.en.add(raw);
+    const underscored = raw.replace(/\s+/g, "_");
+    const spaced = raw.replace(/_/g, " ").replace(/\s+/g, " ").trim();
+    if (underscored) terms.en.add(underscored);
+    if (spaced) terms.en.add(spaced);
+  }
+
   state.baseKeywordTerms.en = [...terms.en].sort((a, b) => b.length - a.length);
   state.baseKeywordTerms.zh = [...terms.zh].sort((a, b) => b.length - a.length);
 }
 
 function renderKeywordSpan(label, alias = null) {
-  const safeLabel = escapeHtml(label || "");
-  const safeAlias = escapeHtml(alias || label || "");
+  const rawLabel = label || "";
+  const displayLabel = rawLabel.replace(/_/g, " ");
+  const safeLabel = escapeHtml(displayLabel);
+  const safeAlias = escapeHtml(alias || rawLabel);
   return `<span class="kw" data-kw-alias="${safeAlias}">${safeLabel}</span>`;
 }
 
@@ -367,39 +475,98 @@ function highlightBaseKeywords(text) {
   return rendered;
 }
 
-function highlightCardRefs(text) {
+function normalizeCardRefLabel(text) {
+  return (text || "")
+    .replace(/_/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function extractExplicitCardRefNames(rawText) {
+  const text = String(rawText || "");
+  const set = new Set();
+
+  // Explicit colored card names, e.g. "#yFine #yTuning+" -> "Fine Tuning+"
+  const colorChunks = text.match(/#y[^\s]+(?:\s+#y[^\s]+)*/g) || [];
+  colorChunks.forEach((chunk) => {
+    const label = chunk
+      .replace(/#y/g, "")
+      .replace(/[，。｡,.!！？:：;；、]+$/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    const key = normalizeCardRefLabel(label);
+    if (key) set.add(key);
+  });
+
+  // Namespaced names, e.g. "hermit:Dead_On" -> "Dead On"
+  const nsRegex = /[A-Za-z_][\w]*:([A-Za-z0-9_+'’\-]+)/g;
+  let match;
+  while ((match = nsRegex.exec(text)) !== null) {
+    const key = normalizeCardRefLabel(match[1]);
+    if (key) set.add(key);
+  }
+
+  return set;
+}
+
+function highlightCardRefs(text, explicitRefSet = null) {
   if (!text) return "";
   const map = state.cardByNameLang[state.lang] || new Map();
   if (!map.size) return text;
-  const names = [...map.keys()].sort((a, b) => b.length - a.length);
+
+  let names = [...map.keys()];
+  if (explicitRefSet instanceof Set) {
+    names = names.filter((name) => explicitRefSet.has(normalizeCardRefLabel(name)));
+  }
+  if (!names.length) return text;
+
+  names.sort((a, b) => b.length - a.length);
   const escaped = names.map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
   if (!escaped.length) return text;
 
   if (state.lang === "zh") {
     const reg = new RegExp(`(^|\\s)(${escaped.join("|")})(?=\\s|$)`, "g");
-    return text.replace(reg, (_full, lead, name) => {
-      const id = map.get(name) || "";
-      if (!id) return _full;
-      return `${lead}<span class="card-ref" data-card-id="${escapeHtml(id)}">${escapeHtml(name)}</span>`;
-    });
+    return text
+      .split(/(<[^>]+>)/g)
+      .map((segment) => {
+        if (segment.startsWith("<")) return segment;
+        return segment.replace(reg, (_full, lead, name) => {
+          const id = map.get(name) || "";
+          if (!id) return _full;
+          return `${lead}<span class="card-ref" data-card-id="${escapeHtml(id)}">${escapeHtml(name)}</span>`;
+        });
+      })
+      .join("");
   }
 
   const reg = new RegExp(`\\b(${escaped.join("|")})\\b`, "gi");
-  return text.replace(reg, (full, name) => {
-    const id = map.get(name) || map.get(full) || "";
-    if (!id) return full;
-    return `<span class="card-ref" data-card-id="${escapeHtml(id)}">${escapeHtml(full)}</span>`;
-  });
+  return text
+    .split(/(<[^>]+>)/g)
+    .map((segment) => {
+      if (segment.startsWith("<")) return segment;
+      return segment.replace(reg, (full, name) => {
+        const id = map.get(name) || map.get(full) || "";
+        if (!id) return full;
+        return `<span class="card-ref" data-card-id="${escapeHtml(id)}">${escapeHtml(full)}</span>`;
+      });
+    })
+    .join("");
 }
 
 function renderRelicDescription(relic) {
-  const raw = normalizeDescText(((relic.description || {})[state.lang] || ""));
+  const sourceDesc = ((relic.description || {})[state.lang] || "");
+  const explicitRefSet = extractExplicitCardRefNames(sourceDesc);
+  const raw = normalizeDescText(sourceDesc);
   if (!raw) return `<span class="muted">${escapeHtml(t("noDescription"))}</span>`;
 
   let text = escapeHtml(raw).replace(/NL/g, "<br>");
+  text = renderEnergyToken(text, relic && relic.energyIcon);
   text = highlightPrefixedKeywords(text);
   text = highlightBaseKeywords(text);
-  text = highlightCardRefs(text);
+  text = highlightCardRefs(text, explicitRefSet);
+  text = renderLegacyBlueMarkers(text);
+  text = renderBracketColorSyntax(text);
   return finalizeZhHtmlSpacing(text);
 }
 
@@ -418,8 +585,11 @@ function renderCardPreviewDescription(card, lang) {
   state.lang = lang;
   const raw = normalizeDescText(fillCardTokens(base, card));
   let text = escapeHtml(raw).replace(/NL/g, "<br>");
+  text = renderEnergyToken(text, card && card.energyIcon);
   text = highlightPrefixedKeywords(text);
   text = highlightBaseKeywords(text);
+  text = renderLegacyBlueMarkers(text);
+  text = renderBracketColorSyntax(text);
   text = finalizeZhHtmlSpacing(text);
   state.lang = prevLang;
   return text;
@@ -431,7 +601,8 @@ function buildRelicElement(relic, langOverride = null) {
   state.lang = lang;
   try {
     const el = document.createElement("article");
-    el.className = `card ${relic.deprecated ? "card-deprecated" : ""}`.trim();
+    const deprecatedByRarity = String(relic.rarity || "").toUpperCase() === "DEPRECATED";
+    el.className = `card ${(relic.deprecated || deprecatedByRarity) ? "card-deprecated" : ""}`.trim();
     el.dataset.relicId = relic.id;
     el.dataset.renderLang = lang;
 
@@ -491,7 +662,7 @@ function buildCardMiniElement(card, langOverride = null) {
   const lang = langOverride || state.lang;
   const name = ((card.name || {})[lang] || card.id || "").trim();
   const desc = renderCardPreviewDescription(card, lang);
-  const type = escapeHtml(card.type || "");
+  const type = escapeHtml(localizeCardType(card.type || ""));
   const rarity = escapeHtml(localizeRarity(card.rarity));
   const color = escapeHtml(localizeColor(card));
 
@@ -535,7 +706,7 @@ function hideKeywordTooltip() {
   tip.innerHTML = "";
 }
 
-function showKeywordTooltip(entry, anchorRect, langOverride = null) {
+function showKeywordTooltip(entry, anchorRect, langOverride = null, energyIcon = null) {
   const lang = langOverride || state.lang;
   const tip = getKeywordTooltip();
   const prevLang = state.lang;
@@ -543,7 +714,10 @@ function showKeywordTooltip(entry, anchorRect, langOverride = null) {
   const name = escapeHtml(normalizeDescText(entry.name || ""));
   const descRaw = normalizeDescText(entry.description || "");
   let desc = escapeHtml(descRaw).replace(/NL/g, "<br>");
+  desc = renderEnergyToken(desc, energyIcon);
   desc = highlightCardRefs(desc);
+  desc = renderLegacyBlueMarkers(desc);
+  desc = renderBracketColorSyntax(desc);
   desc = finalizeZhHtmlSpacing(desc);
   state.lang = prevLang;
 
@@ -611,12 +785,20 @@ function bindTooltipEvents() {
     if (kw && elements.grid.contains(kw)) {
       const cardNode = kw.closest("article.card[data-relic-id]");
       const renderLang = cardNode && cardNode.dataset && cardNode.dataset.renderLang === "zh" ? "zh" : "en";
+      const relicId = cardNode && cardNode.dataset ? cardNode.dataset.relicId : null;
+      const relic = relicId ? state.relics.find((r) => r.id === relicId) : null;
       const label = (kw.dataset.kwAlias || kw.textContent || "").trim();
-      const entry = findKeywordEntry(label, renderLang);
+      let entry = findKeywordEntry(label, renderLang);
+      if (!entry && label.includes(":")) {
+        const local = label.split(":").pop().trim();
+        if (local) {
+          entry = findKeywordEntry(local, renderLang);
+        }
+      }
       if (!entry) {
         hideKeywordTooltip();
       } else {
-        showKeywordTooltip(entry, kw.getBoundingClientRect(), renderLang);
+        showKeywordTooltip(entry, kw.getBoundingClientRect(), renderLang, relic && relic.energyIcon ? relic.energyIcon : null);
       }
       return;
     }
@@ -657,6 +839,15 @@ function bindTooltipEvents() {
 }
 
 function buildOptions() {
+  const prevValues = {
+    rarity: elements.rarityFilter.value,
+    color: elements.colorFilter.value,
+    deprecated: elements.deprecatedFilter.value,
+    sortBy: elements.sortBy.value,
+    sortDir: elements.sortDir.value,
+    pageSize: elements.pageSize.value,
+  };
+
   const anyLabel = t("any");
 
   elements.rarityFilter.innerHTML = "";
@@ -705,6 +896,21 @@ function buildOptions() {
 
   [["ASC", t("asc")], ["DESC", t("desc")]].forEach(([value, label]) => elements.sortDir.appendChild(option(value, label)));
   [20, 30, 50, 100].forEach((size) => elements.pageSize.appendChild(option(String(size), String(size))));
+
+  if (prevValues.rarity) elements.rarityFilter.value = prevValues.rarity;
+  if (prevValues.color) elements.colorFilter.value = prevValues.color;
+  if (prevValues.deprecated) elements.deprecatedFilter.value = prevValues.deprecated;
+  if (prevValues.sortBy) elements.sortBy.value = prevValues.sortBy;
+  if (prevValues.sortDir) elements.sortDir.value = prevValues.sortDir;
+  if (prevValues.pageSize) elements.pageSize.value = prevValues.pageSize;
+
+  // Normalize invalid values to what's available in option lists.
+  elements.rarityFilter.value = elements.rarityFilter.value;
+  elements.colorFilter.value = elements.colorFilter.value;
+  elements.deprecatedFilter.value = elements.deprecatedFilter.value;
+  elements.sortBy.value = elements.sortBy.value;
+  elements.sortDir.value = elements.sortDir.value || "ASC";
+  elements.pageSize.value = elements.pageSize.value || String(state.pageSize || 20);
 }
 
 function filterAndSort() {
@@ -749,6 +955,42 @@ function filterAndSort() {
 function render() {
   filterAndSort();
 
+  const total = state.filtered.length;
+  state.pageSize = Number(elements.pageSize.value || state.pageSize || 20);
+  const pageCount = Math.max(1, Math.ceil(total / state.pageSize));
+  state.page = Math.min(Math.max(1, state.page), pageCount);
+
+  const start = (state.page - 1) * state.pageSize;
+  const slice = state.filtered.slice(start, start + state.pageSize);
+
+  elements.grid.innerHTML = "";
+  if (!state.translatorMode) {
+    slice.forEach((relic) => elements.grid.appendChild(buildRelicElement(relic)));
+  } else {
+    slice.forEach((relic) => {
+      elements.grid.appendChild(buildRelicElement(relic, "en"));
+      elements.grid.appendChild(buildRelicElement(relic, "zh"));
+    });
+  }
+
+  elements.summary.textContent = t("summary")
+    .replace("{shown}", String(slice.length))
+    .replace("{total}", String(total));
+
+  elements.pageInfo.textContent = t("pageInfo")
+    .replace("{page}", String(state.page))
+    .replace("{total}", String(pageCount));
+
+  elements.prevPage.disabled = state.page <= 1;
+  elements.nextPage.disabled = state.page >= pageCount;
+
+  const showClear = (elements.searchInput.value || "").trim().length > 0;
+  elements.clearSearchInlineBtn.classList.toggle("visible", showClear);
+
+  syncUrlState();
+}
+
+function renderCurrentPage() {
   const total = state.filtered.length;
   state.pageSize = Number(elements.pageSize.value || state.pageSize || 20);
   const pageCount = Math.max(1, Math.ceil(total / state.pageSize));
@@ -830,7 +1072,7 @@ function bindControls() {
     state.lang = state.lang === "en" ? "zh" : "en";
     applyI18nText();
     buildOptions();
-    render();
+    renderCurrentPage();
     updateTranslatorEntryLink();
   });
 }

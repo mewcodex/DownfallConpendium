@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-13T23:56:30.580856Z",
+  "generatedAt": "2026-05-17T17:31:54.478713Z",
   "relicCount": 174,
   "relics": [
     {
@@ -10,8 +10,8 @@
         "zh": "破片手雷"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]3strings.DESCRIPTIONS[1]",
-        "zh": "strings.DESCRIPTIONS[0]3strings.DESCRIPTIONS[1]"
+        "en": "Damage dealt to random enemies is increased by #b3 [REMOVE_SPACE].",
+        "zh": "随机对敌人造成的伤害增加 #b3 点。"
       },
       "rarity": "UNCOMMON",
       "color": "GREMLIN",
@@ -21,6 +21,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_fragmentationgrenade.png",
       "imageResource": "relics/fragmentation_grenade.png",
       "deprecated": false
@@ -33,8 +34,8 @@
         "zh": "地精炸弹"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]30strings.DESCRIPTIONS[1]",
-        "zh": "strings.DESCRIPTIONS[0]30strings.DESCRIPTIONS[1]"
+        "en": "Whenever a Gremlin dies, deal #b30 damage to ALL enemies.",
+        "zh": "当地精死亡时, 对所有敌人造成 #b30 点伤害。"
       },
       "rarity": "RARE",
       "color": "GREMLIN",
@@ -44,6 +45,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_gremlinbomb.png",
       "imageResource": "relics/gremlin_bomb.png",
       "deprecated": false
@@ -56,8 +58,8 @@
         "zh": "地精墓碑"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "Dead Gremlins can be Resurrected at Rest Sites as a Free Action.",
+        "zh": "可在 #y休息处 随机 #g复活 (自由行动) 一名死亡的地精。"
       },
       "rarity": "RARE",
       "color": "GREMLIN",
@@ -67,6 +69,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_gremlingravestone.png",
       "imageResource": "relics/gremlin_gravestone.png",
       "deprecated": false
@@ -79,8 +82,8 @@
         "zh": "首领之角"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "At the start of each combat, gain [E] , draw #b1 card, and #ySwap to the next Gremlin.",
+        "zh": "战斗开始时，获得 [E] 并抽 #b1 张牌。 #ygremlin:切换 至下只地精。"
       },
       "rarity": "STARTER",
       "color": "GREMLIN",
@@ -90,6 +93,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_gremlinknob.png",
       "imageResource": "relics/gremlinKnob.png",
       "deprecated": false
@@ -102,8 +106,8 @@
         "zh": "首领之冠"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]colorifyName(new GremlinKnob().name, 'r')strings.DESCRIPTIONS[1]",
-        "zh": "strings.DESCRIPTIONS[0]colorifyName(new GremlinKnob().name, 'r')strings.DESCRIPTIONS[1]"
+        "en": "Replaces Mob Leader's Staff. NL The first time you shuffle your draw pile each turn, gain [E] , draw #b1 card, and #ySwap to the next Gremlin.",
+        "zh": "替换 首领之角 。 NL 每回合首次洗牌时，获得 [E] 并抽 #b1 张牌。 #ygremlin:切换 至下只地精。"
       },
       "rarity": "BOSS",
       "color": "GREMLIN",
@@ -113,6 +117,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_gremlinknobupgrade.png",
       "imageResource": "relics/gremlinKnobUpgrade.png",
       "deprecated": false
@@ -125,8 +130,8 @@
         "zh": "完美胸肌"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "Whenever you gain #yStrength [REMOVE_SPACE], gain an equal amount of #yTemporary_HP [REMOVE_SPACE]. NL Start each combat with #b1 #yStrength.",
+        "zh": "每当你获得 #y力量 时，获得等量 #y临时生命 。战斗开始时，获得 #b1 点 #y力量 。"
       },
       "rarity": "UNCOMMON",
       "color": "GREMLIN",
@@ -136,6 +141,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_impeccablepecs.png",
       "imageResource": "relics/impeccable_pecs.png",
       "deprecated": false
@@ -148,8 +154,8 @@
         "zh": "领头代付"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "Gain [E] at the start of your turn. NL Upon pickup, #rpermanently #rlose #ra #rGremlin.",
+        "zh": "回合开始时获得 [E] 。 NL 本局游戏 #r失去 一名地精。"
       },
       "rarity": "BOSS",
       "color": "GREMLIN",
@@ -159,6 +165,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_leadervoucher.png",
       "imageResource": "relics/leader_voucher.png",
       "deprecated": false
@@ -171,8 +178,8 @@
         "zh": "魔槌"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "Whenever you apply #yWeak, gain #b1 #yWiz [REMOVE_SPACE], up to #b3 times per turn.",
+        "zh": "每当你给予 #y虚弱 时，获得 #b1 层 #y法力 。每回合最多 #b3 次。"
       },
       "rarity": "UNCOMMON",
       "color": "GREMLIN",
@@ -182,6 +189,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_magicalmallet.png",
       "imageResource": "relics/magical_mallet.png",
       "deprecated": false
@@ -194,8 +202,8 @@
         "zh": "多刺盾牌"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]2strings.DESCRIPTIONS[1]",
-        "zh": "strings.DESCRIPTIONS[0]2strings.DESCRIPTIONS[1]"
+        "en": "Whenever you gain #yBlock [REMOVE_SPACE], deal #b2 damage to a random enemy.",
+        "zh": "每当你获得 #y格挡 时, 随机对敌人造成 #b2 点伤害。"
       },
       "rarity": "RARE",
       "color": "SHARED",
@@ -205,6 +213,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/gremlin_pricklyshields.png",
       "imageResource": "relics/prickly_shields.png",
       "deprecated": false
@@ -217,8 +226,8 @@
         "zh": "小个子雕像"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "The first time a Gremlin would die each combat, heal it to #b75% of your Max HP instead.",
+        "zh": "每场战斗首次地精死亡时，免死并回复至 #b75% 最大生命。"
       },
       "rarity": "BOSS",
       "color": "GREMLIN",
@@ -228,6 +237,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_shortstature.png",
       "imageResource": "relics/short_stature.png",
       "deprecated": false
@@ -240,8 +250,8 @@
         "zh": "被盗商品"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]2strings.DESCRIPTIONS[1]",
-        "zh": "strings.DESCRIPTIONS[0]2strings.DESCRIPTIONS[1]"
+        "en": "Whenever you #ySwap [REMOVE_SPACE], gain an #yEcho of a random Colorless card. NL At the start of combat, the Merchant gains #b2 #yStrength [REMOVE_SPACE].",
+        "zh": "#ygremlin:切换 时, 随机将 #b1 张无色牌的 #ygremlin:回响 加入手牌。 NL 商人额外获得 #b2 点 #y力量 。"
       },
       "rarity": "SHOP",
       "color": "GREMLIN",
@@ -251,6 +261,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_stolenmerchandise.png",
       "imageResource": "relics/stolen_merchandise.png",
       "deprecated": false
@@ -263,8 +274,8 @@
         "zh": "支援卷轴"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "At the start of your 3rd turn, gain [E] [E] and draw #b2 cards.",
+        "zh": "第 #b3 回合开始时，获得 [E] [E] 并抽 #b2 张牌。"
       },
       "rarity": "RARE",
       "color": "SHARED",
@@ -274,6 +285,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/gremlin_supplyscroll.png",
       "imageResource": "relics/supply_scroll.png",
       "deprecated": false
@@ -286,8 +298,8 @@
         "zh": "团队协作"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "Whenever you draw #yTag #yTeam [REMOVE_SPACE], draw another card. NL Upon pickup, add two copies of #yTag #yTeam to your deck.",
+        "zh": "抽到 #y配合 时，额外抽 #b1 张牌。 NL 拾起时，将 #b2 张 #y配合 加入牌组。"
       },
       "rarity": "SHOP",
       "color": "GREMLIN",
@@ -297,6 +309,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_tagteamwork.png",
       "imageResource": "relics/tag_teamwork.png",
       "deprecated": false
@@ -309,8 +322,8 @@
         "zh": "巫师帽"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "Whenever you consume #yWiz [REMOVE_SPACE], remove a debuff at random.",
+        "zh": "使用 #ygremlin:法力 时，随机失去 #b1 种 #r负面效果 。"
       },
       "rarity": "UNCOMMON",
       "color": "GREMLIN",
@@ -320,6 +333,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_wizardhat.png",
       "imageResource": "relics/wizard_hat.png",
       "deprecated": false
@@ -332,8 +346,8 @@
         "zh": "法师杖"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]",
-        "zh": "strings.DESCRIPTIONS[0]"
+        "en": "#yWiz deals #b7 additional damage.",
+        "zh": "#ygremlin:法力 效果额外造成 #b7 点伤害。"
       },
       "rarity": "RARE",
       "color": "GREMLIN",
@@ -343,6 +357,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_wizardstaff.png",
       "imageResource": "relics/wizard_staff.png",
       "deprecated": false
@@ -355,8 +370,8 @@
         "zh": "烧火棍"
       },
       "description": {
-        "en": "strings.DESCRIPTIONS[0]4strings.DESCRIPTIONS[1]",
-        "zh": "strings.DESCRIPTIONS[0]4strings.DESCRIPTIONS[1]"
+        "en": "At the end of each turn, deal #b4 damage to each #yWeakened enemy.",
+        "zh": "你的回合结束时，被 #y虚弱 的敌人受到 #b4 点伤害。"
       },
       "rarity": "COMMON",
       "color": "GREMLIN",
@@ -366,6 +381,7 @@
       },
       "colorPillBg": "rgba(205, 92, 92, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/gremlin_card_gremlin_orb.png",
       "img": "assets/relics/gremlin_woundpoker.png",
       "imageResource": "relics/wound_poker.png",
       "deprecated": false
@@ -389,6 +405,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/guardian_bottledanomaly.png",
       "imageResource": "relics/bottledAnomaly.png",
       "deprecated": false
@@ -412,6 +429,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_bottledstasis.png",
       "imageResource": "relics/bottledStasis.png",
       "deprecated": false
@@ -435,6 +453,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_defensivemodemoreblock.png",
       "imageResource": "relics/bronzeArmorPlate.png",
       "deprecated": false
@@ -458,6 +477,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/guardian_gemstonegun.png",
       "imageResource": "relics/GemstoneGun.png",
       "deprecated": false
@@ -481,6 +501,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_modeshifter.png",
       "imageResource": "relics/modeShifter.png",
       "deprecated": false
@@ -493,8 +514,8 @@
         "zh": "守护者齿轮"
       },
       "description": {
-        "en": "Replaces sb [REMOVE_SPACE].[] NL At the start of combat, gain #yGear #yUp. NL Whenever you enter #yDefensive #yMode [REMOVE_SPACE], gain [E] and draw #b2 cards.",
-        "zh": "替换 sb 。 NL 战斗开始时，获得1张 #y预防 。 NL 每当你进入 #y防御模式 ，获得 [E] 并抽 #b2 张牌。"
+        "en": "Replaces Bronze Gear [REMOVE_SPACE].[] NL At the start of combat, gain #yGear #yUp. NL Whenever you enter #yDefensive #yMode [REMOVE_SPACE], gain [E] and draw #b2 cards.",
+        "zh": "替换 铜制齿轮 。 NL 战斗开始时，获得1张 #y预防 。 NL 每当你进入 #y防御模式 ，获得 [E] 并抽 #b2 张牌。"
       },
       "rarity": "BOSS",
       "color": "GUARDIAN",
@@ -504,6 +525,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_modeshifterplus.png",
       "imageResource": "relics/guardianGear.png",
       "deprecated": false
@@ -527,6 +549,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_obsidianscales.png",
       "imageResource": "relics/obsidianscales.png",
       "deprecated": false
@@ -550,6 +573,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_pickaxe.png",
       "imageResource": "relics/pick.png",
       "deprecated": false
@@ -573,6 +597,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/guardian_pocketsentry.png",
       "imageResource": "relics/pocketSentry.png",
       "deprecated": false
@@ -596,6 +621,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_sackofgems.png",
       "imageResource": "relics/sackOfgems.png",
       "deprecated": false
@@ -619,6 +645,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_stasiscodex.png",
       "imageResource": "relics/constructCodex.png",
       "deprecated": false
@@ -642,6 +669,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_stasisegg.png",
       "imageResource": "relics/stasisEgg.png",
       "deprecated": false
@@ -665,6 +693,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_stasisslotreductionrelic.png",
       "imageResource": "relics/bots.png",
       "deprecated": false
@@ -688,6 +717,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/guardian_card_guardian_orb.png",
       "img": "assets/relics/guardian_stasisupgraderelic.png",
       "imageResource": "relics/cryoChamber.png",
       "deprecated": false
@@ -711,6 +741,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_absorbendcombat.png",
       "imageResource": "relics/heartofgoo.png",
       "deprecated": false
@@ -723,8 +754,8 @@
         "zh": "黏液腐心"
       },
       "description": {
-        "en": "Replaces sb.toString() [REMOVE_SPACE].[] NL Whenever you #yslimeboundmod:Consume, heal #b3 HP, up to #b15 each combat.",
-        "zh": "替换 sb.toString() 。 NL #yslimeboundmod:吞食黏液 时，回复 #b3 点生命。 NL （每场战斗最多 #b15 点）"
+        "en": "Replaces Heart of Goo [REMOVE_SPACE].[] NL Whenever you #yslimeboundmod:Consume, heal #b3 HP, up to #b15 each combat.",
+        "zh": "替换 黏液之心 。 NL #yslimeboundmod:吞食黏液 时，回复 #b3 点生命。 NL （每场战斗最多 #b15 点）"
       },
       "rarity": "BOSS",
       "color": "SLIMEBOUND",
@@ -734,6 +765,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_absorbendcombatupgraded.png",
       "imageResource": "relics/heartofgooblack.png",
       "deprecated": false
@@ -757,6 +789,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_aggressiveslimerelic.png",
       "imageResource": "relics/minion.png",
       "deprecated": false
@@ -769,8 +802,8 @@
         "zh": "贪婪黏液"
       },
       "description": {
-        "en": "(this.DESCRIPTIONS[0])",
-        "zh": "(this.DESCRIPTIONS[0])"
+        "en": "At the start of combat, spawn #yGreed #yOoze (can be revived if #yAbsorbed [REMOVE_SPACE]). NL At Rest Sites, #yGreed #yOoze will take #b50 of your souls, increasing its damage by #b1.",
+        "zh": "战斗开始时， #y分裂 一只可重生的 #y贪婪史莱姆 。 NL 在休息处， #y贪婪史莱姆 会吞食 #b50 金币并提高它造成的伤害 #g1 点。"
       },
       "rarity": "SPECIAL",
       "color": "SLIMEBOUND",
@@ -780,6 +813,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_greedoozerelic.png",
       "imageResource": "relics/greedOoze.png",
       "deprecated": false
@@ -803,6 +837,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_maxslimesrelic.png",
       "imageResource": "relics/slimeplushie.png",
       "deprecated": false
@@ -826,6 +861,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_potencyrelic.png",
       "imageResource": "relics/oozeStone.png",
       "deprecated": false
@@ -849,6 +885,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/slimebound_preparedrelic.png",
       "imageResource": "relics/slimedteaSet.png",
       "deprecated": false
@@ -861,8 +898,8 @@
         "zh": "破烂黏液"
       },
       "description": {
-        "en": "(this.DESCRIPTIONS[0])",
-        "zh": "(this.DESCRIPTIONS[0])"
+        "en": "At the start of combat, spawn #yScrap #yOoze (can be revived if #yAbsorbed [REMOVE_SPACE]). NL At Rest Sites, you can donate a card to the #yScrap #yOoze, modifying its damage: NL #b+1 damage for #gUncommons NL #b+2 damage for #yRares NL #b-1 damage for Commons NL #b-2 damage for #rCurses",
+        "zh": "战斗开始时， #yslimeboundmod:分裂 一只可重生的 #y破烂史莱姆 。在休息处，你可以向其弃予一张牌来改变它的伤害。 NL #r诅咒牌 ： #r-2 点。 NL 普通牌 ： #r-1 点。 NL #b罕见牌 ： #g+1 点。 NL #y稀有牌 ： #g+2 点。"
       },
       "rarity": "SPECIAL",
       "color": "SLIMEBOUND",
@@ -872,6 +909,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_scrapoozerelic.png",
       "imageResource": "relics/scrapOoze.png",
       "deprecated": false
@@ -895,6 +933,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_selfdamagepreventrelic.png",
       "imageResource": "relics/protectiveGear.png",
       "deprecated": false
@@ -918,6 +957,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_slimedskullrelic.png",
       "imageResource": "relics/slimedSkull.png",
       "deprecated": false
@@ -941,6 +981,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_slimedtailrelic.png",
       "imageResource": "relics/slimedTail.png",
       "deprecated": false
@@ -964,6 +1005,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/slimebound_stickystick.png",
       "imageResource": "relics/StickyStick.png",
       "deprecated": false
@@ -987,6 +1029,7 @@
       },
       "colorPillBg": "rgba(64, 200, 64, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/slimebound_card_slimebound_orb.png",
       "img": "assets/relics/slimebound_tarblob.png",
       "imageResource": "relics/tarblob.png",
       "deprecated": false
@@ -1010,6 +1053,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_abyssblade.png",
       "imageResource": "relics/AbyssBlade.png",
       "deprecated": false
@@ -1033,6 +1077,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_awakenedurn.png",
       "imageResource": "relics/AwakenedUrn.png",
       "deprecated": false
@@ -1056,6 +1101,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/awakened_cawingcask.png",
       "imageResource": "relics/CawingCask.png",
       "deprecated": false
@@ -1079,6 +1125,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_cursedblessing.png",
       "imageResource": "relics/CursedBlessing.png",
       "deprecated": false
@@ -1102,6 +1149,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_curvedsword.png",
       "imageResource": "relics/CurvedSword.png",
       "deprecated": false
@@ -1125,6 +1173,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_curvedswordmeme.png",
       "imageResource": "relics/CurvedSword.png",
       "deprecated": false
@@ -1148,6 +1197,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/awakened_deadbird.png",
       "imageResource": "relics/DeadBird.png",
       "deprecated": false
@@ -1171,6 +1221,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_eyeoftheoccult.png",
       "imageResource": "relics/EyeOfTheOccult.png",
       "deprecated": false
@@ -1194,6 +1245,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_hexxbomb.png",
       "imageResource": "relics/HexxBomb.png",
       "deprecated": false
@@ -1217,6 +1269,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/awakened_miniblackhole.png",
       "imageResource": "relics/MiniBlackHole.png",
       "deprecated": false
@@ -1240,6 +1293,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_moontalisman.png",
       "imageResource": "relics/MoonTalisman.png",
       "deprecated": false
@@ -1263,6 +1317,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_nerfedmummifiedhand.png",
       "imageResource": "relics/NerfedMummifiedHand.png",
       "deprecated": false
@@ -1286,6 +1341,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_rippeddoll.png",
       "imageResource": "relics/RippedDoll.png",
       "deprecated": false
@@ -1309,6 +1365,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/awakened_shardofnowak.png",
       "imageResource": "relics/ShardOfNowak.png",
       "deprecated": false
@@ -1321,8 +1378,8 @@
         "zh": "撕碎的玩偶"
       },
       "description": {
-        "en": "Replaces sb [REMOVE_SPACE].[] NL At the start of your turn, #yawakened:Conjure [REMOVE_SPACE]. NL The first time you refresh your Spells each combat, gain #b1 #yRitual [REMOVE_SPACE].",
-        "zh": "替换 sb [REMOVE_SPACE] ｡ NL 在每回合开始时 , #yawakened:念咒 [REMOVE_SPACE] ｡ NL 在每场战斗中首次刷新咒典时 , 获得 #b1层 #y仪式 [REMOVE_SPACE] ｡"
+        "en": "Replaces Ripped Doll [REMOVE_SPACE].[] NL At the start of your turn, #yawakened:Conjure [REMOVE_SPACE]. NL The first time you refresh your Spells each combat, gain #b1 #yRitual [REMOVE_SPACE].",
+        "zh": "替换 撕裂的玩偶 [REMOVE_SPACE] ｡ NL 在每回合开始时 , #yawakened:念咒 [REMOVE_SPACE] ｡ NL 在每场战斗中首次刷新咒典时 , 获得 #b1层 #y仪式 [REMOVE_SPACE] ｡"
       },
       "rarity": "BOSS",
       "color": "AWAKENED_BLUE",
@@ -1332,6 +1389,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_shreddeddoll.png",
       "imageResource": "relics/ShreddedDoll.png",
       "deprecated": false
@@ -1355,6 +1413,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_strengthbooster.png",
       "imageResource": "relics/StrengthBooster.png",
       "deprecated": false
@@ -1378,6 +1437,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_tomeofportalmancy.png",
       "imageResource": "relics/TomeOfPortalmancy.png",
       "deprecated": false
@@ -1401,6 +1461,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/awakened_violetplumage.png",
       "imageResource": "relics/VioletPlumage.png",
       "deprecated": false
@@ -1424,6 +1485,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_whiteribbon.png",
       "imageResource": "relics/WhiteRibbon.png",
       "deprecated": false
@@ -1447,6 +1509,7 @@
       },
       "colorPillBg": "rgba(18, 250, 240, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/awakenedOne_card_awakened_orb.png",
       "img": "assets/relics/awakened_zenerdeck.png",
       "imageResource": "relics/ZenerDeck.png",
       "deprecated": false
@@ -1470,6 +1533,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/bronze_analyticalcore.png",
       "imageResource": "relics/BronzeCore.png",
       "deprecated": false
@@ -1493,6 +1557,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_bottledcode.png",
       "imageResource": "relics/bottledCode.png",
       "deprecated": false
@@ -1516,6 +1581,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_bronzecore.png",
       "imageResource": "relics/BronzeCore.png",
       "deprecated": false
@@ -1539,6 +1605,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/bronze_bronzeidol.png",
       "imageResource": "relics/BronzeIdol.png",
       "deprecated": false
@@ -1562,6 +1629,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_cablespool.png",
       "imageResource": "relics/CableSpool.png",
       "deprecated": false
@@ -1585,6 +1653,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/bronze_decaswashers.png",
       "imageResource": "relics/DecasWashers.png",
       "deprecated": false
@@ -1608,6 +1677,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_donuswashers.png",
       "imageResource": "relics/DonusWashers.png",
       "deprecated": false
@@ -1631,6 +1701,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_electromagneticcoil.png",
       "imageResource": "relics/ElectromagneticCoil.png",
       "deprecated": false
@@ -1654,6 +1725,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_makeshiftbattery.png",
       "imageResource": "relics/MakeshiftBattery.png",
       "deprecated": false
@@ -1677,6 +1749,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_mallet.png",
       "imageResource": "relics/Mallet.png",
       "deprecated": false
@@ -1689,8 +1762,8 @@
         "zh": "铂金核心"
       },
       "description": {
-        "en": "Replaces sb [REMOVE_SPACE].[] NL The first #b3 Functions you create each combat cost #b0 until played.",
-        "zh": "替换 sb 。 NL 每场战斗 #ybronze:编译 的前 #b3 张 #ybronze:方法 首次耗能为 #b0 。"
+        "en": "Replaces Bronze Core [REMOVE_SPACE].[] NL The first #b3 Functions you create each combat cost #b0 until played.",
+        "zh": "替换 铜制核心 。 NL 每场战斗 #ybronze:编译 的前 #b3 张 #ybronze:方法 首次耗能为 #b0 。"
       },
       "rarity": "BOSS",
       "color": "BRONZE_AUTOMATON",
@@ -1700,6 +1773,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_platinumcore.png",
       "imageResource": "relics/PlatinumCore.png",
       "deprecated": false
@@ -1723,6 +1797,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_protectivegoggles.png",
       "imageResource": "relics/ProtectiveGoggles.png",
       "deprecated": false
@@ -1746,6 +1821,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_silverbullet.png",
       "imageResource": "relics/SilverBullet.png",
       "deprecated": false
@@ -1769,6 +1845,7 @@
       },
       "colorPillBg": "rgba(214, 202, 158, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/automaton_card_bronze_orb.png",
       "img": "assets/relics/bronze_timepiece.png",
       "imageResource": "relics/coolingFluid.png",
       "deprecated": false
@@ -1792,6 +1869,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/champ_barbells.png",
       "imageResource": "relics/Barbell.png",
       "deprecated": false
@@ -1815,6 +1893,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_berserkersguidetoslaughter.png",
       "imageResource": "relics/BerserkersGuide.png",
       "deprecated": false
@@ -1838,6 +1917,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_blackknighthelmet.png",
       "imageResource": "relics/WarlordsHelmet.png",
       "deprecated": false
@@ -1861,6 +1941,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/champ_champstancesmodrelic.png",
       "imageResource": "relics/ChampStances.png",
       "deprecated": false
@@ -1884,6 +1965,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_championcrown.png",
       "imageResource": "relics/ChampionCrown.png",
       "deprecated": false
@@ -1896,8 +1978,8 @@
         "zh": "终极王冠"
       },
       "description": {
-        "en": "Replaces sb [REMOVE_SPACE].[] NL The first time you play a #ychamp:Finisher each turn, draw #b2 cards and enter a random #yStance [REMOVE_SPACE].",
-        "zh": "替换 sb 。 NL 战斗开始时，进入 #ychamp:终极 并持续 #b2 回合 。"
+        "en": "Replaces Champion's Crown [REMOVE_SPACE].[] NL The first time you play a #ychamp:Finisher each turn, draw #b2 cards and enter a random #yStance [REMOVE_SPACE].",
+        "zh": "替换 冠军金冠 。 NL 战斗开始时，进入 #ychamp:终极 并持续 #b2 回合 。"
       },
       "rarity": "BOSS",
       "color": "CHAMP_GRAY",
@@ -1907,6 +1989,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_championcrownupgraded.png",
       "imageResource": "relics/UltimateChampionCrown.png",
       "deprecated": false
@@ -1930,6 +2013,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_defensivetrainingmanual.png",
       "imageResource": "relics/DefensiveManual.png",
       "deprecated": false
@@ -1953,6 +2037,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/champ_deflectingbracers.png",
       "imageResource": "relics/DeflectingBracers.png",
       "deprecated": false
@@ -1976,6 +2061,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/champ_duelingglove.png",
       "imageResource": "relics/DuelingGlove.png",
       "deprecated": false
@@ -1999,6 +2085,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_fightingfordummies.png",
       "imageResource": "relics/FightingForDummies.png",
       "deprecated": false
@@ -2022,6 +2109,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_gladiatorsbookofmartialprowess.png",
       "imageResource": "relics/GladiatorsHandbook.png",
       "deprecated": false
@@ -2045,6 +2133,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_liftrelic.png",
       "imageResource": "relics/LiftRelic.png",
       "deprecated": false
@@ -2068,6 +2157,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_powerarmor.png",
       "imageResource": "relics/PowerArmor.png",
       "deprecated": false
@@ -2091,6 +2181,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_rageamulet.png",
       "imageResource": "relics/CrystallizedMud.png",
       "deprecated": false
@@ -2114,6 +2205,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_signaturefinisher.png",
       "imageResource": "relics/SignatureMove.png",
       "deprecated": false
@@ -2137,6 +2229,7 @@
       },
       "colorPillBg": "rgba(100, 100, 100, 1.0)",
       "colorPillFg": "rgba(245, 245, 245, 0.98)",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "img": "assets/relics/champ_spectershand.png",
       "imageResource": "relics/SpectresHand.png",
       "deprecated": false
@@ -2160,6 +2253,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/collector_autocurser.png",
       "imageResource": "relics/AutoCurser.png",
       "deprecated": false
@@ -2183,6 +2277,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_bagoftricks.png",
       "imageResource": "relics/BagOfTricks.png",
       "deprecated": false
@@ -2206,6 +2301,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/collector_bagpipes.png",
       "imageResource": "relics/Bagpipes.png",
       "deprecated": false
@@ -2229,6 +2325,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_blockedchakra.png",
       "imageResource": "relics/BlockedChakra.png",
       "deprecated": false
@@ -2252,6 +2349,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_bottledcollectible.png",
       "imageResource": "relics/BottledCollectible.png",
       "deprecated": false
@@ -2275,6 +2373,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_emeraldtorch.png",
       "imageResource": "relics/EmeraldTorch.png",
       "deprecated": false
@@ -2298,6 +2397,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/collector_forbiddenfruit.png",
       "imageResource": "relics/ForbiddenFruit.png",
       "deprecated": false
@@ -2321,6 +2421,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/collector_fuelcanister.png",
       "imageResource": "relics/FuelCanister.png",
       "deprecated": false
@@ -2344,6 +2445,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_holidaycoal.png",
       "imageResource": "relics/HolidayCoal.png",
       "deprecated": false
@@ -2367,6 +2469,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/collector_incense.png",
       "imageResource": "relics/Incense.png",
       "deprecated": false
@@ -2390,6 +2493,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_jadering.png",
       "imageResource": "relics/JadeRing.png",
       "deprecated": false
@@ -2402,8 +2506,8 @@
         "zh": "多彩火炬"
       },
       "description": {
-        "en": "Replaces sb[] [REMOVE_SPACE]. At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve [REMOVE_SPACE]. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve [REMOVE_SPACE].",
-        "zh": "替换 sb []。战斗开始时，获得一张 #y余烬 与 #b1 #ycollector:储能 。每当你 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
+        "en": "Replaces Emerald Torch[] [REMOVE_SPACE]. At the start of each combat, add an #yEmber into your hand and gain #b1 #ycollector:Reserve [REMOVE_SPACE]. The first time you #yExhaust an #yEmber each turn, gain #b1 #ycollector:Reserve [REMOVE_SPACE].",
+        "zh": "替换 翠绿火炬 []。战斗开始时，获得一张 #y余烬 与 #b1 #ycollector:储能 。每当你 #y消耗 一张 #y余烬 时，获得 #b1 #ycollector:储能 。"
       },
       "rarity": "BOSS",
       "color": "COLLECTOR",
@@ -2413,6 +2517,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_prismatictorch.png",
       "imageResource": "relics/PrismaticTorch.png",
       "deprecated": false
@@ -2436,6 +2541,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/collector_roughdiamond.png",
       "imageResource": "relics/RoughDiamond.png",
       "deprecated": false
@@ -2459,6 +2565,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_soullitlamp.png",
       "imageResource": "relics/SoullitLamp.png",
       "deprecated": false
@@ -2482,6 +2589,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_thecontract.png",
       "imageResource": "relics/TheContract.png",
       "deprecated": false
@@ -2505,6 +2613,7 @@
       },
       "colorPillBg": "rgba(13, 158, 131, 1.0)",
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
       "img": "assets/relics/collector_thimblehelm.png",
       "imageResource": "relics/ThimbleHelm.png",
       "deprecated": false
@@ -2528,6 +2637,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_blackcandle.png",
       "imageResource": "images/relics/BlackCandle.png",
       "deprecated": false
@@ -2551,6 +2661,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_brokenwingstatue.png",
       "imageResource": "images/relics/WingStatue.png",
       "deprecated": false
@@ -2574,6 +2685,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_burdenofknowledge.png",
       "imageResource": "images/relics/Burden.png",
       "deprecated": false
@@ -2597,6 +2709,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_cloakofmanyfaces.png",
       "imageResource": "images/relics/CloakOfManyFaces.png",
       "deprecated": false
@@ -2620,6 +2733,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_extracursedbell.png",
       "imageResource": "images/relics/ExtraCursedBell.png",
       "deprecated": false
@@ -2643,6 +2757,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_extracursedkey.png",
       "imageResource": "images/relics/ExtraCursedKey.png",
       "deprecated": false
@@ -2655,8 +2770,8 @@
         "zh": "地精战利品"
       },
       "description": {
-        "en": "fullDesc",
-        "zh": "fullDesc"
+        "en": "Upon pickup, add #b6 cards to your deck from the Match Game.",
+        "zh": "拾起时，将 #b6 张对对碰牌加入你的牌组。"
       },
       "rarity": "SPECIAL",
       "color": "SHARED",
@@ -2666,6 +2781,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_gremlinsack.png",
       "imageResource": "images/relics/GremlinSack.png",
       "deprecated": false
@@ -2689,6 +2805,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_gremlinwheel.png",
       "imageResource": "images/relics/GremlinWheel.png",
       "deprecated": false
@@ -2712,6 +2829,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_heartblessingblue.png",
       "imageResource": "images/relics/HeartBlessingBlue.png",
       "deprecated": false
@@ -2735,6 +2853,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_heartblessinggreen.png",
       "imageResource": "images/relics/HeartBlessingGreen.png",
       "deprecated": false
@@ -2758,6 +2877,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_heartblessingred.png",
       "imageResource": "images/relics/HeartBlessingRed.png",
       "deprecated": false
@@ -2781,6 +2901,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_heartsmalice.png",
       "imageResource": "images/relics/HeartsMalice.png",
       "deprecated": false
@@ -2804,6 +2925,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_hecktoplasm.png",
       "imageResource": "images/relics/ectoplasmEvil.png",
       "deprecated": false
@@ -2827,6 +2949,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_knowingskull.png",
       "imageResource": "images/relics/KnowingSkull.png",
       "deprecated": false
@@ -2850,6 +2973,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_neowblessing_player.png",
       "imageResource": "images/relics/blessing.png",
       "deprecated": false
@@ -2873,6 +2997,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_rediou.png",
       "imageResource": "images/relics/BanditContract.png",
       "deprecated": false
@@ -2896,6 +3021,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_rediouupgrade.png",
       "imageResource": "images/relics/BanditContractUpgrade.png",
       "deprecated": false
@@ -2919,6 +3045,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_shatteredfragment.png",
       "imageResource": "images/relics/WingShiv.png",
       "deprecated": false
@@ -2942,6 +3069,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_teleportstone.png",
       "imageResource": "images/relics/TeleportStone.png",
       "deprecated": false
@@ -2965,6 +3093,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/downfall_testrelic.png",
       "imageResource": "images/relics/WingStatue.png",
       "deprecated": false
@@ -2988,6 +3117,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/expansioncontent_studycardrelic.png",
       "imageResource": "relics/tinybowlerhat.png",
       "deprecated": false
@@ -3001,7 +3131,7 @@
       },
       "description": {
         "en": "First #b2 times you use a potion each combat, gain a random potion. You can only use #b2 potions each combat.",
-        "zh": "每场战斗最多使用 #b2本场战斗药水使用次数已耗尽。2"
+        "zh": "每场战斗最多使用 #b2 瓶药水,战斗中使用药水时，随机生成另外 #b1 瓶。"
       },
       "rarity": "BOSS",
       "color": "COLOR_YELLOW",
@@ -3011,6 +3141,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_bartenderglass.png",
       "imageResource": "relics/bartenders_glass.png",
       "deprecated": false
@@ -3034,6 +3165,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_blackpowder.png",
       "imageResource": "relics/black_powder.png",
       "deprecated": false
@@ -3057,6 +3189,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/hermit_bloodytooth.png",
       "imageResource": "relics/bloody_tooth.png",
       "deprecated": false
@@ -3080,6 +3213,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/hermit_brasstacks.png",
       "imageResource": "relics/brass_tacks.png",
       "deprecated": false
@@ -3103,6 +3237,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_charredglove.png",
       "imageResource": "relics/charred_glove.png",
       "deprecated": false
@@ -3126,6 +3261,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_claspedlocket.png",
       "imageResource": "relics/clasped_locket.png",
       "deprecated": false
@@ -3149,6 +3285,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_dentedplate.png",
       "imageResource": "relics/dented_plate.png",
       "deprecated": false
@@ -3172,6 +3309,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_horseshoe.png",
       "imageResource": "relics/horseshoe.png",
       "deprecated": false
@@ -3195,6 +3333,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_momento.png",
       "imageResource": "relics/memento.png",
       "deprecated": false
@@ -3218,6 +3357,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_petghost.png",
       "imageResource": "relics/pet_ghost.png",
       "deprecated": false
@@ -3241,6 +3381,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_redscarf.png",
       "imageResource": "relics/red_scarf.png",
       "deprecated": false
@@ -3264,6 +3405,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/hermit_ryestalk.png",
       "imageResource": "relics/rye_stalk.png",
       "deprecated": false
@@ -3287,6 +3429,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_spyglass.png",
       "imageResource": "relics/spyglass.png",
       "deprecated": false
@@ -3310,6 +3453,7 @@
       },
       "colorPillBg": "rgba(64, 70, 70, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/hermit_card_small_orb.png",
       "img": "assets/relics/hermit_straightrazor.png",
       "imageResource": "relics/straight_razor.png",
       "deprecated": false
@@ -3333,6 +3477,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/hexamod_bolsterengine.png",
       "imageResource": "relics/BolsterEngine.png",
       "deprecated": false
@@ -3356,6 +3501,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_candleofcauterizing.png",
       "imageResource": "relics/CandleOfCauterizing.png",
       "deprecated": false
@@ -3379,6 +3525,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_icecube.png",
       "imageResource": "relics/IceCube.png",
       "deprecated": false
@@ -3402,6 +3549,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_inflammatoryletter.png",
       "imageResource": "relics/InflammatoryLetter.png",
       "deprecated": false
@@ -3425,6 +3573,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_jaroffuel.png",
       "imageResource": "relics/AncientSpiritShield.png",
       "deprecated": false
@@ -3448,6 +3597,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_libra.png",
       "imageResource": "relics/Libra.png",
       "deprecated": false
@@ -3471,6 +3621,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_matchstickcase.png",
       "imageResource": "relics/MatchstickCase.png",
       "deprecated": false
@@ -3494,6 +3645,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_recyclingmachine.png",
       "imageResource": "relics/RecyclingMachine.png",
       "deprecated": false
@@ -3517,6 +3669,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/hexamod_sixitude.png",
       "imageResource": "relics/Sixitude.png",
       "deprecated": false
@@ -3540,6 +3693,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_soulofchaos.png",
       "imageResource": "relics/SoulOfChaos.png",
       "deprecated": false
@@ -3563,6 +3717,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_soulstone.png",
       "imageResource": "relics/SoulStone.png",
       "deprecated": false
@@ -3586,6 +3741,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_spiritbrand.png",
       "imageResource": "relics/SpiritBrand.png",
       "deprecated": false
@@ -3609,6 +3765,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_thebrokenseal.png",
       "imageResource": "relics/TheBrokenSeal.png",
       "deprecated": false
@@ -3621,8 +3778,8 @@
         "zh": "以太印记"
       },
       "description": {
-        "en": "Replaces sb [REMOVE_SPACE].[] NL Whenever you #yhexamod:Ignite a Ghostflame, gain #b4 #yBlock [REMOVE_SPACE].",
-        "zh": "替换 sb 。 NL #y点燃 一枚鬼火时，获得 #b4 点 #y格挡 。"
+        "en": "Replaces Spirit Brand [REMOVE_SPACE].[] NL Whenever you #yhexamod:Ignite a Ghostflame, gain #b4 #yBlock [REMOVE_SPACE].",
+        "zh": "替换 精神烙印 。 NL #y点燃 一枚鬼火时，获得 #b4 点 #y格挡 。"
       },
       "rarity": "BOSS",
       "color": "GHOST_GREEN",
@@ -3632,6 +3789,7 @@
       },
       "colorPillBg": "rgba(114, 62, 109, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/theHexaghost_card_hexaghost_orb.png",
       "img": "assets/relics/hexamod_unbrokensoul.png",
       "imageResource": "relics/UnbrokenSoul.png",
       "deprecated": false
@@ -3655,6 +3813,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/sneckomod_babysnecko.png",
       "imageResource": "relics/BabySnecko.png",
       "deprecated": false
@@ -3678,6 +3837,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/sneckomod_blankcard.png",
       "imageResource": "relics/BlankCard.png",
       "deprecated": false
@@ -3701,6 +3861,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_cleanmud.png",
       "imageResource": "relics/CleanMud.png",
       "deprecated": false
@@ -3724,6 +3885,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_confusingcodex.png",
       "imageResource": "relics/ConfusingCodex.png",
       "deprecated": false
@@ -3747,6 +3909,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_crystallizedmud.png",
       "imageResource": "relics/CrystallizedMud.png",
       "deprecated": false
@@ -3770,6 +3933,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_d8.png",
       "imageResource": "relics/D8.png",
       "deprecated": false
@@ -3793,6 +3957,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_loadeddie.png",
       "imageResource": "relics/LoadedDie.png",
       "deprecated": false
@@ -3816,6 +3981,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_rareboosterpack.png",
       "imageResource": "relics/RareBoosterPack.png",
       "deprecated": false
@@ -3839,6 +4005,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_sleevedace.png",
       "imageResource": "relics/SleevedAce.png",
       "deprecated": false
@@ -3851,8 +4018,8 @@
         "zh": "幸运马蹄"
       },
       "description": {
-        "en": "Upon pickup, obtain #b3 Upgraded Uncommon and #b2 Rare SneckoMod.getClassFromColor(myColor) cards. All combats drop an additional SneckoMod.getClassFromColor(myColor) card reward.",
-        "zh": "拾起时，获得来自 SneckoMod.getClassFromColor(myColor) 的 #b3 组 已 #y升级 罕见牌奖励和 #b2 组稀有牌奖励。所有战斗卡牌奖励都将额外掉落 SneckoMod.getClassFromColor(myColor) 牌。"
+        "en": "Upon pickup, choose #b1 of #b3 #yCharacters [REMOVE_SPACE]. Choose #b3 #yUpgraded Uncommon cards and #b2 Rare cards to add to your deck. All combats drop an additional card reward of the chosen character's cards.",
+        "zh": "拾起时，从 #b3 个 #y角色 选择 #b1 个。获得 #b3 组已 #y升级 罕见牌奖励和 #b2 组稀有牌奖励（来自所选角色）。所有战斗都会额外掉落所选角色的卡牌奖励。"
       },
       "rarity": "BOSS",
       "color": "SNECKO_CYAN",
@@ -3862,6 +4029,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_sneckoboss.png",
       "imageResource": "relics/LuckyHorseshoe.png",
       "deprecated": false
@@ -3885,6 +4053,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_sneckocommon.png",
       "imageResource": "relics/SealOfApproval.png",
       "deprecated": false
@@ -3908,6 +4077,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_sneckosoul.png",
       "imageResource": "relics/SneckoSoul.png",
       "deprecated": false
@@ -3931,6 +4101,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/sneckomod_sneckotalon.png",
       "imageResource": "relics/SneckoTalon.png",
       "deprecated": false
@@ -3954,6 +4125,7 @@
       },
       "colorPillBg": null,
       "colorPillFg": null,
+      "energyIcon": "assets/energy-icons/colorless_card_colorless_orb.png",
       "img": "assets/relics/sneckomod_supersneckoeye.png",
       "imageResource": "relics/SuperSneckoEye.png",
       "deprecated": false
@@ -3977,6 +4149,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_supersneckosoul.png",
       "imageResource": "relics/SuperSneckoSoul.png",
       "deprecated": false
@@ -4000,6 +4173,7 @@
       },
       "colorPillBg": "rgba(64, 123, 147, 1.0)",
       "colorPillFg": "rgba(235, 235, 235, 0.98)",
+      "energyIcon": "assets/energy-icons/sneckomod_card_snecko_orb.png",
       "img": "assets/relics/sneckomod_unknownegg.png",
       "imageResource": "relics/UnknownEgg.png",
       "deprecated": false

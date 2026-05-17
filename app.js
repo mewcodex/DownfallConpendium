@@ -315,25 +315,57 @@ function finalizeFilledTokenSpacing(text) {
     // In zh mode, remove spaces around filled numeric values.
     return text
       .replace(/\s*__TVG__(-?\d+)__\s*/g, "__TVG__$1__")
-      .replace(/\s*__TV__(-?\d+)__\s*/g, "$1");
+      .replace(/\s*__TV__(-?\d+)__\s*/g, "__TV__$1__");
   }
   return text
     .replace(/__TVG__(-?\d+)__/g, "__TVG__$1__")
-    .replace(/__TV__(-?\d+)__/g, "$1");
+    .replace(/__TV__(-?\d+)__/g, "__TV__$1__");
 }
 
 function renderNumericMarkers(text) {
   if (!text) return "";
-  return text.replace(/__TVG__(-?\d+)__/g, '<span class="num-up">$1</span>');
+  return text
+    .replace(/__TVG__(-?\d+)__/g, '<span class="kw-mark-blue">$1</span>')
+    .replace(/__TV__(-?\d+)__/g, '<span class="kw-mark-blue">$1</span>');
+}
+
+function preserveLegacyBlueMarkers(text) {
+  if (!text) return "";
+  return text.replace(/#b\s*([^\s<]+)/g, "__BLUE__$1__");
+}
+
+function renderLegacyBlueMarkers(text) {
+  if (!text) return "";
+  return text.replace(/__BLUE__([^_<\s][^<\s]*)__/g, '<span class="kw-mark-blue">$1</span>');
 }
 
 function renderBracketColorSyntax(text) {
   if (!text) return "";
   // Parse STS color syntax like [#e087a4]text[] after other highlights,
   // so explicit color wrappers have lower priority.
-  return text
-    .replace(/\[#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\]/g, (_full, hex) => `<span class="inline-color" style="color:#${hex}">`)
-    .replace(/\[\]/g, "</span>");
+  const tokenRe = /\[#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\]|\[\]/g;
+  let out = "";
+  let last = 0;
+  let openCount = 0;
+  let match;
+
+  while ((match = tokenRe.exec(text)) !== null) {
+    out += text.slice(last, match.index);
+    if (match[1]) {
+      out += `<span class="inline-color" style="color:#${match[1]}">`;
+      openCount += 1;
+    } else if (openCount > 0) {
+      out += "</span>".repeat(openCount);
+      openCount = 0;
+    }
+    last = tokenRe.lastIndex;
+  }
+
+  out += text.slice(last);
+  if (openCount > 0) {
+    out += "</span>".repeat(openCount);
+  }
+  return out;
 }
 
 function attachAfterlifeHover(text) {
@@ -537,7 +569,7 @@ function highlightCardReferencesNoHover(text) {
 function withProtectedCardNameRefs(text, transform) {
   if (!text) return "";
   const stash = [];
-  const protectedText = text.replace(/<span class="card-name-ref"[^>]*>[\s\S]*?<\/span>/g, (match) => {
+  const protectedText = text.replace(/<span class="(?:card-name-ref|kw|card-ref)"[^>]*>[\s\S]*?<\/span>/g, (match) => {
     const token = `@@CARDREF_${stash.length}@@`;
     stash.push(match);
     return token;
@@ -621,9 +653,31 @@ function buildBaseKeywordIndex() {
   baseKeywords.forEach((entry) => {
     const enAliases = (((entry || {}).en || {}).aliases || []).filter((v) => typeof v === "string" && v.trim());
     const zhAliases = (((entry || {}).zh || {}).aliases || []).filter((v) => typeof v === "string" && v.trim());
-    enAliases.forEach((alias) => enTerms.add(alias.trim()));
+    enAliases.forEach((alias) => {
+      const raw = alias.trim();
+      if (!raw) return;
+      enTerms.add(raw);
+      const underscored = raw.replace(/\s+/g, "_");
+      const spaced = raw.replace(/_/g, " ").replace(/\s+/g, " ").trim();
+      if (underscored) enTerms.add(underscored);
+      if (spaced) enTerms.add(spaced);
+    });
     zhAliases.forEach((alias) => zhTerms.add(alias.trim()));
   });
+
+  // Include keyword aliases that differ by spaces/underscores (e.g. Temporary HP/Temporary_HP)
+  // so text variants remain highlightable.
+  const enKeywordMap = state.keywordByLang.en || new Map();
+  for (const alias of enKeywordMap.keys()) {
+    const raw = String(alias || "").trim();
+    if (!raw) continue;
+    if (!raw.includes(" ") && !raw.includes("_")) continue;
+    enTerms.add(raw);
+    const underscored = raw.replace(/\s+/g, "_");
+    const spaced = raw.replace(/_/g, " ").replace(/\s+/g, " ").trim();
+    if (underscored) enTerms.add(underscored);
+    if (spaced) enTerms.add(spaced);
+  }
 
   state.baseKeywordTerms.en = [...enTerms].sort((a, b) => b.length - a.length);
   state.baseKeywordTerms.zh = [...zhTerms].sort((a, b) => b.length - a.length);
@@ -1070,6 +1124,7 @@ function buildSearchableDescription(card) {
   text = normalizeDescriptionSpacing(text);
   text = fillNumericTokens(text, card);
   text = finalizeFilledTokenSpacing(text);
+  text = text.replace(/__TVG__(-?\d+)__/g, "$1").replace(/__TV__(-?\d+)__/g, "$1");
   text = stripResidualStarPrefixes(text);
   text = hideZhSpacesAfterFormatting(text);
   text = stripRemoveSpaceMarkers(text);
@@ -1217,6 +1272,7 @@ function renderDescription(card, options = {}) {
   text = normalizeDescriptionSpacing(text);
   text = fillNumericTokens(text, card, useUpgrade);
   text = finalizeFilledTokenSpacing(text);
+  text = preserveLegacyBlueMarkers(text);
   text = escapeHtml(text).replace(/NL/g, "<br>");
   text = renderEnergyToken(text, card);
   text = highlightCardReferencesNoHover(text);
@@ -1225,6 +1281,7 @@ function renderDescription(card, options = {}) {
   text = highlightSocketPlaceholders(text);
   text = highlightPrefixedKeywords(text);
   text = highlightBaseKeywords(text);
+  text = renderLegacyBlueMarkers(text);
   text = renderNumericMarkers(text);
   text = renderBracketColorSyntax(text);
   text = attachAfterlifeHover(text);
@@ -1242,6 +1299,7 @@ function renderDescriptionForPreview(card, options = {}) {
   text = normalizeDescriptionSpacing(text);
   text = fillNumericTokens(text, card, useUpgrade);
   text = finalizeFilledTokenSpacing(text);
+  text = preserveLegacyBlueMarkers(text);
   text = escapeHtml(text).replace(/NL/g, "<br>");
   text = renderEnergyToken(text, card);
   text = highlightCardReferencesNoHover(text);
@@ -1251,6 +1309,7 @@ function renderDescriptionForPreview(card, options = {}) {
   // Keep preview non-interactive but preserve visual keyword formatting.
   text = highlightPrefixedKeywords(text);
   text = highlightBaseKeywords(text);
+  text = renderLegacyBlueMarkers(text);
   text = renderNumericMarkers(text);
   text = renderBracketColorSyntax(text);
   text = attachAfterlifeHover(text);

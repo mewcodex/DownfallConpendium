@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-13T23:56:30.563402Z",
+  "generatedAt": "2026-05-17T17:31:54.445744Z",
   "cardCount": 992,
   "cards": [
     {
@@ -46628,7 +46628,7 @@
       "upgradeTokenValues": {
         "M": 2
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -46693,7 +46693,7 @@
       "upgradeTokenValues": {
         "M": 3
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -46760,7 +46760,7 @@
         "D": 3,
         "M": 6
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -46894,7 +46894,7 @@
       "upgradeTokenValues": {
         "M": 2
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -46959,7 +46959,7 @@
       "upgradeTokenValues": {
         "M": 3
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47026,7 +47026,7 @@
         "DM": 5,
         "M": 14
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47091,7 +47091,7 @@
       "upgradeTokenValues": {
         "B": 9
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": true,
@@ -47152,7 +47152,7 @@
       },
       "tokenValues": {},
       "upgradeTokenValues": {},
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47217,7 +47217,7 @@
       "upgradeTokenValues": {
         "D": 14
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47292,7 +47292,7 @@
         "DM": 2,
         "M": 1
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47365,7 +47365,7 @@
         "M": 2,
         "DM": 10
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47432,7 +47432,7 @@
         "D": 4,
         "M": 6
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47497,7 +47497,7 @@
       "upgradeTokenValues": {
         "D": 21
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47562,7 +47562,7 @@
       "upgradeTokenValues": {
         "M": 5
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47688,7 +47688,7 @@
       "upgradeTokenValues": {
         "M": 9
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47816,7 +47816,7 @@
       },
       "tokenValues": {},
       "upgradeTokenValues": {},
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47877,7 +47877,7 @@
       },
       "tokenValues": {},
       "upgradeTokenValues": {},
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -47942,7 +47942,7 @@
       "upgradeTokenValues": {
         "M": 4
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48007,7 +48007,7 @@
       },
       "tokenValues": {},
       "upgradeTokenValues": {},
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48072,7 +48072,7 @@
       "upgradeTokenValues": {
         "M": 5
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48149,7 +48149,7 @@
         "M": 3,
         "DM": 5
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48214,7 +48214,7 @@
       "upgradeTokenValues": {
         "M": 3
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48279,7 +48279,7 @@
       "upgradeTokenValues": {
         "D": 25
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48344,7 +48344,7 @@
       "upgradeTokenValues": {
         "B": 6
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48409,7 +48409,7 @@
       "upgradeTokenValues": {
         "D": 9
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48476,7 +48476,7 @@
         "D": 13,
         "M": 2
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48547,7 +48547,7 @@
         "B": 10,
         "M": 1
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48614,7 +48614,7 @@
         "M": 10,
         "DM": 2
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48681,7 +48681,7 @@
         "B": 18,
         "M": 8
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48750,7 +48750,7 @@
       "upgradeTokenValues": {
         "M": 5
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48825,7 +48825,7 @@
       "upgradeTokenValues": {
         "B": 12
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48892,7 +48892,7 @@
         "M": 8,
         "DM": 3
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -48957,7 +48957,7 @@
       "upgradeTokenValues": {
         "D": 11
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -49024,7 +49024,7 @@
         "M": 8,
         "DM": 12
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -49089,7 +49089,7 @@
       "upgradeTokenValues": {
         "M": 3
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,
@@ -49166,7 +49166,7 @@
         "M": 5,
         "DM": 10
       },
-      "energyIcon": "assets/energy-icons/collector_card_collector_orb.png",
+      "energyIcon": "assets/energy-icons/champ_card_champ_orb.png",
       "colorPillBg": null,
       "colorPillFg": null,
       "deprecated": false,

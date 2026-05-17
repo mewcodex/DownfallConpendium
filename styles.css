@@ -481,6 +481,11 @@ select {
   background: rgba(220, 178, 67, 0.36);
 }
 
+.tag-rarity-deprecated {
+  background: rgba(120, 120, 120, 0.46);
+  color: #2b2824;
+}
+
 .card-desc {
   font-size: 0.9rem;
   line-height: 1.4;
