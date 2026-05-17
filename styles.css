@@ -581,6 +581,11 @@ html[lang^="zh"] .card-desc {
   font-weight: 700;
 }
 
+.kw-mark-purple {
+  color: #7b4dc9;
+  font-weight: 700;
+}
+
 .card-mini-preview {
   --preview-base-width: 240px;
   --preview-base-height: 320px;

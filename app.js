@@ -329,14 +329,20 @@ function renderNumericMarkers(text) {
     .replace(/__TV__(-?\d+)__/g, '<span class="kw-mark-blue">$1</span>');
 }
 
-function preserveLegacyBlueMarkers(text) {
+function preserveLegacyColorMarkers(text) {
   if (!text) return "";
-  return text.replace(/#b\s*([^\s<]+)/g, "__BLUE__$1__");
+  return text
+    .replace(/#b\s*([^\s<]+)/g, "__BLUE__$1__")
+    .replace(/#r\s*([^\s<]+)/g, "__RED__$1__")
+    .replace(/#p\s*([^\s<]+)/g, "__PURPLE__$1__");
 }
 
-function renderLegacyBlueMarkers(text) {
+function renderLegacyColorMarkers(text) {
   if (!text) return "";
-  return text.replace(/__BLUE__([^_<\s][^<\s]*)__/g, '<span class="kw-mark-blue">$1</span>');
+  return text
+    .replace(/__BLUE__([^_<\s][^<\s]*)__/g, '<span class="kw-mark-blue">$1</span>')
+    .replace(/__RED__([^_<\s][^<\s]*)__/g, '<span class="kw-mark-red">$1</span>')
+    .replace(/__PURPLE__([^_<\s][^<\s]*)__/g, '<span class="kw-mark-purple">$1</span>');
 }
 
 function renderBracketColorSyntax(text) {
@@ -744,12 +750,14 @@ function formatTooltipDescriptionText(rawText, cardContext) {
   text = stripResidualStarPrefixes(text);
   text = highlightSocketPlaceholders(text);
   text = renderNumericMarkers(text);
-  text = text.replace(/#([ybr])\s*([^\s<]+)/g, (_full, colorToken, word) => {
+  text = text.replace(/#([ybrp])\s*([^\s<]+)/g, (_full, colorToken, word) => {
     const cls = colorToken === "y"
       ? "kw-mark-yellow"
       : colorToken === "b"
         ? "kw-mark-blue"
-        : "kw-mark-red";
+        : colorToken === "r"
+          ? "kw-mark-red"
+          : "kw-mark-purple";
     return `<span class="${cls}">${word}</span>`;
   });
   text = renderBracketColorSyntax(text);
@@ -1272,7 +1280,7 @@ function renderDescription(card, options = {}) {
   text = normalizeDescriptionSpacing(text);
   text = fillNumericTokens(text, card, useUpgrade);
   text = finalizeFilledTokenSpacing(text);
-  text = preserveLegacyBlueMarkers(text);
+  text = preserveLegacyColorMarkers(text);
   text = escapeHtml(text).replace(/NL/g, "<br>");
   text = renderEnergyToken(text, card);
   text = highlightCardReferencesNoHover(text);
@@ -1281,7 +1289,7 @@ function renderDescription(card, options = {}) {
   text = highlightSocketPlaceholders(text);
   text = highlightPrefixedKeywords(text);
   text = highlightBaseKeywords(text);
-  text = renderLegacyBlueMarkers(text);
+  text = renderLegacyColorMarkers(text);
   text = renderNumericMarkers(text);
   text = renderBracketColorSyntax(text);
   text = attachAfterlifeHover(text);
@@ -1299,7 +1307,7 @@ function renderDescriptionForPreview(card, options = {}) {
   text = normalizeDescriptionSpacing(text);
   text = fillNumericTokens(text, card, useUpgrade);
   text = finalizeFilledTokenSpacing(text);
-  text = preserveLegacyBlueMarkers(text);
+  text = preserveLegacyColorMarkers(text);
   text = escapeHtml(text).replace(/NL/g, "<br>");
   text = renderEnergyToken(text, card);
   text = highlightCardReferencesNoHover(text);
@@ -1309,7 +1317,7 @@ function renderDescriptionForPreview(card, options = {}) {
   // Keep preview non-interactive but preserve visual keyword formatting.
   text = highlightPrefixedKeywords(text);
   text = highlightBaseKeywords(text);
-  text = renderLegacyBlueMarkers(text);
+  text = renderLegacyColorMarkers(text);
   text = renderNumericMarkers(text);
   text = renderBracketColorSyntax(text);
   text = attachAfterlifeHover(text);
