@@ -70,6 +70,7 @@ const uiText = {
     notInPool: "not in the pool",
     searchBtn: "Search",
     clearSearch: "Clear",
+    navRelics: "Relics",
   },
   zh: {
     eyebrow: "崩坠 Mod 卡牌展示",
@@ -102,6 +103,7 @@ const uiText = {
     notInPool: "不在卡池中",
     searchBtn: "搜索",
     clearSearch: "清除",
+    navRelics: "遗物",
   },
 };
 
@@ -119,6 +121,7 @@ function getNotInPoolBadgeText(card) {
 const elements = {
   langToggle: document.getElementById("langToggle"),
   upgradeToggle: document.getElementById("upgradeToggle"),
+  relicsPageLink: document.getElementById("relicsPageLink"),
   searchInput: document.getElementById("searchInput"),
   searchBtn: document.getElementById("searchBtn"),
   clearSearchInlineBtn: document.getElementById("clearSearchInlineBtn"),
@@ -136,6 +139,16 @@ const elements = {
   nextPage: document.getElementById("nextPage"),
   pageInfo: document.getElementById("pageInfo"),
 };
+
+function updateCrossPageLinks() {
+  const link = elements.relicsPageLink;
+  if (!link) return;
+  const params = new URLSearchParams();
+  if (state.lang !== "en") params.set("lang", state.lang);
+  if (state.translatorMode) params.set("translator_mode", "1");
+  const query = params.toString();
+  link.href = query ? `relics.html?${query}` : "relics.html";
+}
 
 function i18n(key) {
   return uiText[state.lang][key];
@@ -1506,6 +1519,7 @@ function writeStateToUrl() {
     window.history.replaceState(null, "", nextUrl);
   }
   updateTranslatorEntryLink();
+  updateCrossPageLinks();
 }
 
 function updateSummary(shown, total) {
@@ -1745,6 +1759,7 @@ async function init() {
   buildOptions();
   syncControlsFromState();
   updateTranslatorEntryLink();
+  updateCrossPageLinks();
   renderCards();
   bindEvents();
 }

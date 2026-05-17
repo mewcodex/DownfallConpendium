@@ -40,6 +40,7 @@ const uiText = {
     summary: "{shown} relics shown ({total} total)",
     searchPlaceholder: "Relic name / id / description",
     noDescription: "No description",
+    navCards: "Cards",
   },
   zh: {
     eyebrow: "Downfall Mod 遗物图鉴",
@@ -66,6 +67,7 @@ const uiText = {
     summary: "显示 {shown} 个遗物（总计 {total}）",
     searchPlaceholder: "遗物名 / 代码名 / 描述",
     noDescription: "无描述",
+    navCards: "卡牌",
   },
 };
 
@@ -106,7 +108,18 @@ const elements = {
   nextPage: document.getElementById("nextPage"),
   pageInfo: document.getElementById("pageInfo"),
   langToggle: document.getElementById("langToggle"),
+  cardsPageLink: document.getElementById("cardsPageLink"),
 };
+
+function updateCrossPageLinks() {
+  const link = elements.cardsPageLink;
+  if (!link) return;
+  const params = new URLSearchParams();
+  if (state.lang !== "en") params.set("lang", state.lang);
+  if (state.translatorMode) params.set("translator_mode", "1");
+  const query = params.toString();
+  link.href = query ? `index.html?${query}` : "index.html";
+}
 
 function t(key) {
   return (uiText[state.lang] || uiText.en)[key] || key;
@@ -150,6 +163,7 @@ function syncUrlState() {
   if (next !== window.location.search) {
     history.replaceState(null, "", `${window.location.pathname}${next}`);
   }
+  updateCrossPageLinks();
 }
 
 function updateTranslatorEntryLink() {
@@ -844,6 +858,7 @@ async function init() {
   bindControls();
   bindTooltipEvents();
   updateTranslatorEntryLink();
+  updateCrossPageLinks();
 
   elements.sortBy.value = "NAME";
   elements.sortDir.value = "ASC";
