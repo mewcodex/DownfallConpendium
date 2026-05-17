@@ -921,11 +921,8 @@ function bindCardReferencePreviewEvents() {
 }
 
 function shouldHighlightPrefixedNoun(noun, hasKeywordEntry) {
-  if (hasKeywordEntry) return true;
   if (!noun || noun.length < 2) return false;
-  // Skip variable-like placeholders such as m2, d3, clm2.
-  if (/^[A-Za-z]{1,5}\d+$/i.test(noun)) return false;
-  return /[A-Za-z_\u4e00-\u9fff]/.test(noun);
+  return Boolean(hasKeywordEntry);
 }
 
 function highlightPrefixedKeywords(text) {
@@ -933,27 +930,11 @@ function highlightPrefixedKeywords(text) {
   return withProtectedCardNameRefs(text, (input) => {
     const prefixedPattern = /([A-Za-z_][\w]*):([^\s<>{}\[\]，。｡,.!！？:：;；]+)/g;
     let rendered = input.replace(prefixedPattern, (_full, _prefix, noun) => {
-      let matchedNoun = noun;
-      let entry = findKeywordEntry(matchedNoun);
-
-      if (!entry) {
-        for (let i = noun.length - 1; i >= 1; i -= 1) {
-          const candidate = noun.slice(0, i);
-          const found = findKeywordEntry(candidate);
-          if (found) {
-            matchedNoun = candidate;
-            entry = found;
-            break;
-          }
-        }
-      }
-
-      if (!shouldHighlightPrefixedNoun(matchedNoun, Boolean(entry))) {
+      const entry = findKeywordEntry(noun);
+      if (!shouldHighlightPrefixedNoun(noun, Boolean(entry))) {
         return _full;
       }
-
-      const rest = noun.slice(matchedNoun.length);
-      return `${renderKeywordSpan(matchedNoun)}${rest}`;
+      return renderKeywordSpan(noun);
     });
     if (state.lang === "zh") {
       // Remove spaces around highlighted keyword in zh mode.
@@ -972,8 +953,8 @@ function highlightBaseKeywords(text) {
       state.baseKeywordTerms.zh.forEach((term) => {
         const escaped = escapeRegExp(term);
         if (!escaped) return;
-        // zh rule: only highlight when prefixed by whitespace, '*', or start-of-line.
-        const reg = new RegExp(`(^|[\\s*])(${escaped})(?=$|[\\s，。｡,.!！？:：;；、\\)）\\]】\\}」』])`, "g");
+        // zh rule: only highlight terms surrounded by whitespace.
+        const reg = new RegExp(`(^|\\s)(${escaped})(?=\\s|$)`, "g");
         rendered = rendered.replace(reg, (_full, lead, match) => `${lead}${renderKeywordSpan(match)}`);
       });
       return rendered;
