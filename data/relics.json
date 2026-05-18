@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-17T17:31:54.478713Z",
+  "generatedAt": "2026-05-18T08:08:09.114049Z",
   "relicCount": 174,
   "relics": [
     {
@@ -4954,7 +4954,11 @@
           "Power Potion",
           "Power_Potion",
           "power_potion",
-          "powerpotion"
+          "powerpotion",
+          "awakened:Power Potion",
+          "awakened:Power_Potion",
+          "awakened:power_potion",
+          "awakened:powerpotion"
         ],
         "icon": null
       },
@@ -4965,7 +4969,11 @@
           "Conjure",
           "conjure",
           "conjured",
-          "awaken"
+          "awaken",
+          "awakened:Conjure",
+          "awakened:conjure",
+          "awakened:conjured",
+          "awakened:awaken"
         ],
         "icon": null
       },
@@ -4974,7 +4982,9 @@
         "description": "Cards with #yChant effects become more powerful for the rest of combat if the last played card in combat was a #yPower card.",
         "aliases": [
           "Chant",
-          "chant"
+          "chant",
+          "awakened:Chant",
+          "awakened:chant"
         ],
         "icon": null
       },
@@ -4985,7 +4995,11 @@
           "Hex",
           "hex",
           "hexxed",
-          "hexx"
+          "hexx",
+          "awakened:Hex",
+          "awakened:hex",
+          "awakened:hexxed",
+          "awakened:hexx"
         ],
         "icon": null
       },
@@ -4995,7 +5009,10 @@
         "aliases": [
           "Drained",
           "drain",
-          "drained"
+          "drained",
+          "awakened:Drained",
+          "awakened:drain",
+          "awakened:drained"
         ],
         "icon": null
       },
@@ -5004,7 +5021,9 @@
         "description": "Whenever you lose [E] , even if you had none to lose, loses HP equal to its #yManaburn [REMOVE_SPACE]. (Does not include [E] spent playing cards.)",
         "aliases": [
           "Manaburn",
-          "manaburn"
+          "manaburn",
+          "awakened:Manaburn",
+          "awakened:manaburn"
         ],
         "icon": null
       },
@@ -5013,7 +5032,9 @@
         "description": "Whenever you play a #yPower card, gain #b1 #yStrength [REMOVE_SPACE].",
         "aliases": [
           "Curiosity",
-          "curiosity"
+          "curiosity",
+          "awakened:Curiosity",
+          "awakened:curiosity"
         ],
         "icon": null
       },
@@ -5023,7 +5044,10 @@
         "aliases": [
           "Encode",
           "encode",
-          "encoded"
+          "encoded",
+          "bronze:Encode",
+          "bronze:encode",
+          "bronze:encoded"
         ],
         "icon": null
       },
@@ -5033,7 +5057,10 @@
         "aliases": [
           "Compile",
           "compile",
-          "compiled"
+          "compiled",
+          "bronze:Compile",
+          "bronze:compile",
+          "bronze:compiled"
         ],
         "icon": null
       },
@@ -5042,7 +5069,9 @@
         "description": "Do not lose Block at the end of the turn.",
         "aliases": [
           "Blur",
-          "blur"
+          "blur",
+          "bronze:Blur",
+          "bronze:blur"
         ],
         "icon": null
       },
@@ -5051,7 +5080,9 @@
         "description": "Shuffle a card into your draw pile.",
         "aliases": [
           "Insert",
-          "insert"
+          "insert",
+          "bronze:Insert",
+          "bronze:insert"
         ],
         "icon": null
       },
@@ -5060,7 +5091,9 @@
         "description": "Discard a card, drawing a new card to replace it.",
         "aliases": [
           "Cycle",
-          "cycle"
+          "cycle",
+          "bronze:Cycle",
+          "bronze:cycle"
         ],
         "icon": null
       },
@@ -5074,7 +5107,12 @@
           "technique",
           "techniques",
           "champ:[crown_icon]",
-          "[crown_icon]"
+          "[crown_icon]",
+          "champ:Skill Bonus",
+          "champ:bonus",
+          "champ:bonuses",
+          "champ:technique",
+          "champ:techniques"
         ],
         "icon": null
       },
@@ -5083,7 +5121,9 @@
         "description": "Extra effect when played in the listed #yStance [REMOVE_SPACE].",
         "aliases": [
           "Combo",
-          "combo"
+          "combo",
+          "champ:Combo",
+          "champ:combo"
         ],
         "icon": null
       },
@@ -5093,7 +5133,10 @@
         "aliases": [
           "Strike",
           "strike",
-          "strikes"
+          "strikes",
+          "champ:Strike",
+          "champ:strike",
+          "champ:strikes"
         ],
         "icon": null
       },
@@ -5105,7 +5148,10 @@
           "finisher",
           "finishers",
           "[fist_icon]",
-          "champ:[fist_icon]"
+          "champ:[fist_icon]",
+          "champ:Finisher",
+          "champ:finisher",
+          "champ:finishers"
         ],
         "icon": null
       },
@@ -5114,7 +5160,9 @@
         "description": "The next time you take #yAttack damage, gain a #yRiposte #yStrike that deals that much damage.",
         "aliases": [
           "Counter",
-          "counter"
+          "counter",
+          "champ:Counter",
+          "champ:counter"
         ],
         "icon": null
       },
@@ -5124,7 +5172,10 @@
         "aliases": [
           "Defensive",
           "defensive",
-          "defensive."
+          "defensive.",
+          "champ:Defensive",
+          "champ:defensive",
+          "champ:defensive."
         ],
         "icon": null
       },
@@ -5134,7 +5185,10 @@
         "aliases": [
           "Berserker",
           "berserker",
-          "berserker."
+          "berserker.",
+          "champ:Berserker",
+          "champ:berserker",
+          "champ:berserker."
         ],
         "icon": null
       },
@@ -5144,7 +5198,10 @@
         "aliases": [
           "Gladiator",
           "gladiator",
-          "gladiator."
+          "gladiator.",
+          "champ:Gladiator",
+          "champ:gladiator",
+          "champ:gladiator."
         ],
         "icon": null
       },
@@ -5154,7 +5211,10 @@
         "aliases": [
           "Ultimate Stance",
           "ultimate",
-          "ultimate."
+          "ultimate.",
+          "champ:Ultimate Stance",
+          "champ:ultimate",
+          "champ:ultimate."
         ],
         "icon": null
       },
@@ -5165,7 +5225,11 @@
           "Fatigue",
           "fatigue",
           "fatigued",
-          "fatigue."
+          "fatigue.",
+          "champ:Fatigue",
+          "champ:fatigue",
+          "champ:fatigued",
+          "champ:fatigue."
         ],
         "icon": null
       },
@@ -5174,7 +5238,9 @@
         "description": "Creatures are Afflicted when they are both #yVulnerable and #yWeak.",
         "aliases": [
           "Afflicted",
-          "afflicted"
+          "afflicted",
+          "collector:Afflicted",
+          "collector:afflicted"
         ],
         "icon": null
       },
@@ -5184,7 +5250,10 @@
         "aliases": [
           "Doom",
           "doom",
-          "doomed"
+          "doomed",
+          "collector:Doom",
+          "collector:doom",
+          "collector:doomed"
         ],
         "icon": null
       },
@@ -5193,7 +5262,9 @@
         "description": "Requires exhausting a card in hand in addition to paying its energy cost.",
         "aliases": [
           "Pyre",
-          "pyre"
+          "pyre",
+          "collector:Pyre",
+          "collector:pyre"
         ],
         "icon": null
       },
@@ -5203,7 +5274,10 @@
         "aliases": [
           "Reserve",
           "reserve",
-          "reserves"
+          "reserves",
+          "collector:Reserve",
+          "collector:reserve",
+          "collector:reserves"
         ],
         "icon": null
       },
@@ -5212,7 +5286,9 @@
         "description": "Megathereal cards move to the exhaust pile when played and at the end of your turn, no matter where they are.",
         "aliases": [
           "Megathereal",
-          "megathereal"
+          "megathereal",
+          "collector:Megathereal",
+          "collector:megathereal"
         ],
         "icon": null
       },
@@ -5221,7 +5297,9 @@
         "description": "While you have #yTemporary #yHP, each Attack you play triggers Torchhead.",
         "aliases": [
           "Torch Head",
-          "torchhead"
+          "torchhead",
+          "collector:Torch Head",
+          "collector:torchhead"
         ],
         "icon": null
       },
@@ -5230,7 +5308,9 @@
         "description": "#yBlock is not removed at the start of your turn.",
         "aliases": [
           "Blur",
-          "blur"
+          "blur",
+          "expansioncontent:Blur",
+          "expansioncontent:blur"
         ],
         "icon": null
       },
@@ -5239,7 +5319,9 @@
         "description": "NOT USED DO NOT TL",
         "aliases": [
           "Vibrancy",
-          "vibrancy"
+          "vibrancy",
+          "expansioncontent:Vibrancy",
+          "expansioncontent:vibrancy"
         ],
         "icon": null
       },
@@ -5248,7 +5330,9 @@
         "description": "NOT USED DO NOT TL",
         "aliases": [
           "Opulence",
-          "opulence"
+          "opulence",
+          "expansioncontent:Opulence",
+          "expansioncontent:opulence"
         ],
         "icon": null
       },
@@ -5257,7 +5341,9 @@
         "description": "At the end of your turn, heal HP equal to your #yRegen then reduce #yRegen by #b1 [REMOVE_SPACE].",
         "aliases": [
           "Regen",
-          "regen"
+          "regen",
+          "expansioncontent:Regen",
+          "expansioncontent:regen"
         ],
         "icon": null
       },
@@ -5266,7 +5352,9 @@
         "description": "At the end of your turn, gain #yBlock equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1.",
         "aliases": [
           "Plated Armor",
-          "plated"
+          "plated",
+          "expansioncontent:Plated Armor",
+          "expansioncontent:plated"
         ],
         "icon": null
       },
@@ -5275,7 +5363,9 @@
         "description": "You may only play #b1 #yBoss card in a turn.",
         "aliases": [
           "Boss",
-          "boss"
+          "boss",
+          "expansioncontent:Boss",
+          "expansioncontent:boss"
         ],
         "icon": null
       },
@@ -5284,7 +5374,9 @@
         "description": "Add a copy of a card to you hand, it is #yEthereal and #yExhausts [REMOVE_SPACE]. NL Echoes cannot be Echoed.",
         "aliases": [
           "Echo",
-          "echo"
+          "echo",
+          "expansioncontent:Echo",
+          "expansioncontent:echo"
         ],
         "icon": null
       },
@@ -5293,7 +5385,9 @@
         "description": "Put a card from your exhaust pile into your hand.",
         "aliases": [
           "Exhume",
-          "exhume"
+          "exhume",
+          "expansioncontent:Exhume",
+          "expansioncontent:exhume"
         ],
         "icon": null
       },
@@ -5302,7 +5396,9 @@
         "description": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it.",
         "aliases": [
           "Invincible",
-          "invincible"
+          "invincible",
+          "expansioncontent:Invincible",
+          "expansioncontent:invincible"
         ],
         "icon": null
       },
@@ -5311,54 +5407,9 @@
         "description": "Put a card from your exhaust pile into your discard pile.",
         "aliases": [
           "Reclaim",
-          "reclaim"
-        ],
-        "icon": null
-      },
-      {
-        "name": "Goop",
-        "description": "The next attack deals #b1 more damage per #yGoop [REMOVE_SPACE], removing all #yGoop and triggering any #yConsume effects.",
-        "aliases": [
-          "Goop",
-          "goop"
-        ],
-        "icon": "assets/keyword-icons/Slimebound_SlimedPower_SlimedS.png"
-      },
-      {
-        "name": "Shackled",
-        "description": "Shackled creatures lose #yStrength for a turn.",
-        "aliases": [
-          "Shackled",
-          "shackled"
-        ],
-        "icon": null
-      },
-      {
-        "name": "Temporary HP",
-        "description": "Until end of combat, prevents damage to HP.",
-        "aliases": [
-          "Temporary HP",
-          "temp hp",
-          "temp_hp"
-        ],
-        "icon": null
-      },
-      {
-        "name": "Pyre",
-        "description": "Requires exhausting a card in hand in addition to paying its energy cost.",
-        "aliases": [
-          "Pyre",
-          "pyre"
-        ],
-        "icon": null
-      },
-      {
-        "name": "Doom",
-        "description": "Doomed creatures lose HP at the start of their turn, then Doom is removed #bunless the creature is #yAfflicted (has both #yWeak and #yVulnerable [REMOVE_SPACE]).",
-        "aliases": [
-          "Doom",
-          "doom",
-          "doomed"
+          "reclaim",
+          "expansioncontent:Reclaim",
+          "expansioncontent:reclaim"
         ],
         "icon": null
       },
@@ -5368,7 +5419,69 @@
         "aliases": [
           "Goop",
           "goop",
-          "gooped"
+          "expansioncontent:Goop",
+          "expansioncontent:goop"
+        ],
+        "icon": "assets/keyword-icons/Slimebound_SlimedPower_SlimedS.png"
+      },
+      {
+        "name": "Shackled",
+        "description": "Shackled creatures lose #yStrength for a turn.",
+        "aliases": [
+          "Shackled",
+          "shackled",
+          "expansioncontent:Shackled",
+          "expansioncontent:shackled"
+        ],
+        "icon": null
+      },
+      {
+        "name": "Temporary HP",
+        "description": "Until end of combat, prevents damage to HP.",
+        "aliases": [
+          "Temporary HP",
+          "temp hp",
+          "temp_hp",
+          "expansioncontent:Temporary HP",
+          "expansioncontent:temp hp",
+          "expansioncontent:temp_hp"
+        ],
+        "icon": null
+      },
+      {
+        "name": "Pyre",
+        "description": "Requires exhausting a card in hand in addition to paying its energy cost.",
+        "aliases": [
+          "Pyre",
+          "pyre",
+          "expansioncontent:Pyre",
+          "expansioncontent:pyre"
+        ],
+        "icon": null
+      },
+      {
+        "name": "Doom",
+        "description": "Doomed creatures lose HP at the start of their turn, then Doom is removed #bunless the creature is #yAfflicted (has both #yWeak and #yVulnerable [REMOVE_SPACE]).",
+        "aliases": [
+          "Doom",
+          "doom",
+          "doomed",
+          "expansioncontent:Doom",
+          "expansioncontent:doom",
+          "expansioncontent:doomed"
+        ],
+        "icon": null
+      },
+      {
+        "name": "Goop",
+        "description": "The next attack deals #b1 more damage per #yGoop [REMOVE_SPACE], removing all #yGoop and triggering any #yConsume effects.",
+        "aliases": [
+          "Goop",
+          "goop",
+          "gooped",
+          "expansioncontent:Goop",
+          "expansioncontent:goop",
+          "expansioncontent:gooped"
         ],
         "icon": "assets/keyword-icons/Slimebound_SlimedPower_SlimedS.png"
       },
@@ -5377,7 +5490,9 @@
         "description": "Creatures with Constricted take damage at the end of their turn.",
         "aliases": [
           "Constricted",
-          "constricted"
+          "constricted",
+          "expansioncontent:Constricted",
+          "expansioncontent:constricted"
         ],
         "icon": null
       },
@@ -5386,7 +5501,9 @@
         "description": "#yExhaust a card, replacing it with a different card.",
         "aliases": [
           "Transform",
-          "transform"
+          "transform",
+          "expansioncontent:Transform",
+          "expansioncontent:transform"
         ],
         "icon": null
       },
@@ -5395,7 +5512,9 @@
         "description": "Creatures in Agony deal #b80% less damage with Attacks.",
         "aliases": [
           "Agony",
-          "agony"
+          "agony",
+          "gremlin:Agony",
+          "gremlin:agony"
         ],
         "icon": null
       },
@@ -5404,7 +5523,9 @@
         "description": "Crippled enemies can no longer lose #yWeak [REMOVE_SPACE]. At the end of their turn, they lose HP equal to their #yWeak [REMOVE_SPACE].",
         "aliases": [
           "Cripple",
-          "cripple"
+          "cripple",
+          "gremlin:Cripple",
+          "gremlin:cripple"
         ],
         "icon": null
       },
@@ -5414,7 +5535,10 @@
         "aliases": [
           "Echo",
           "echo",
-          "echoes"
+          "echoes",
+          "gremlin:Echo",
+          "gremlin:echo",
+          "gremlin:echoes"
         ],
         "icon": null
       },
@@ -5424,7 +5548,10 @@
         "aliases": [
           "Fat Gremlin",
           "fat gremlin",
-          "fat_gremlin"
+          "fat_gremlin",
+          "gremlin:Fat Gremlin",
+          "gremlin:fat gremlin",
+          "gremlin:fat_gremlin"
         ],
         "icon": null
       },
@@ -5434,7 +5561,10 @@
         "aliases": [
           "Gremlin Wizard",
           "gremlin wizard",
-          "gremlin_wizard"
+          "gremlin_wizard",
+          "gremlin:Gremlin Wizard",
+          "gremlin:gremlin wizard",
+          "gremlin:gremlin_wizard"
         ],
         "icon": null
       },
@@ -5444,7 +5574,10 @@
         "aliases": [
           "Mad Gremlin",
           "mad gremlin",
-          "mad_gremlin"
+          "mad_gremlin",
+          "gremlin:Mad Gremlin",
+          "gremlin:mad gremlin",
+          "gremlin:mad_gremlin"
         ],
         "icon": null
       },
@@ -5454,7 +5587,10 @@
         "aliases": [
           "Shield Gremlin",
           "shield gremlin",
-          "shield_gremlin"
+          "shield_gremlin",
+          "gremlin:Shield Gremlin",
+          "gremlin:shield gremlin",
+          "gremlin:shield_gremlin"
         ],
         "icon": null
       },
@@ -5464,7 +5600,10 @@
         "aliases": [
           "Sneaky Gremlin",
           "sneaky gremlin",
-          "sneaky_gremlin"
+          "sneaky_gremlin",
+          "gremlin:Sneaky Gremlin",
+          "gremlin:sneaky gremlin",
+          "gremlin:sneaky_gremlin"
         ],
         "icon": null
       },
@@ -5473,7 +5612,9 @@
         "description": "Switch places with another character. Does nothing if there is no valid target.",
         "aliases": [
           "Swap",
-          "swap"
+          "swap",
+          "gremlin:Swap",
+          "gremlin:swap"
         ],
         "icon": null
       },
@@ -5482,7 +5623,9 @@
         "description": "When you have at least three stacks of Wiz, Attacks will consume all stacks to deal #b7 additional damage.",
         "aliases": [
           "Wiz",
-          "wiz"
+          "wiz",
+          "gremlin:Wiz",
+          "gremlin:wiz"
         ],
         "icon": null
       },
@@ -5491,7 +5634,9 @@
         "description": "Target loses specified amount of resource. You gain the amount that was lost.",
         "aliases": [
           "Steal",
-          "steal"
+          "steal",
+          "gremlin:Steal",
+          "gremlin:steal"
         ],
         "icon": null
       },
@@ -5500,7 +5645,9 @@
         "description": "At the start of your turn, add #b1 #yBellow , #ySkull #yBash and #yRush to your hand.",
         "aliases": [
           "Gremlin Nob",
-          "nob"
+          "nob",
+          "gremlin:Gremlin Nob",
+          "gremlin:nob"
         ],
         "icon": null
       },
@@ -5511,7 +5658,11 @@
           "Socket",
           "socket",
           "sockets",
-          "socketed"
+          "socketed",
+          "guardianmod:Socket",
+          "guardianmod:socket",
+          "guardianmod:sockets",
+          "guardianmod:socketed"
         ],
         "icon": null
       },
@@ -5520,7 +5671,9 @@
         "description": "A card in Stasis stays there for amount of turns equal to its cost plus #b1 [REMOVE_SPACE]. NL When it exits, it is returned to your hand and costs #b0 until played.",
         "aliases": [
           "Stasis",
-          "stasis"
+          "stasis",
+          "guardianmod:Stasis",
+          "guardianmod:stasis"
         ],
         "icon": null
       },
@@ -5530,7 +5683,10 @@
         "aliases": [
           "Gem",
           "gem",
-          "gems"
+          "gems",
+          "guardianmod:Gem",
+          "guardianmod:gem",
+          "guardianmod:gems"
         ],
         "icon": null
       },
@@ -5541,7 +5697,11 @@
           "Defensive Mode",
           "defensive mode",
           "defensive_mode",
-          "defensive"
+          "defensive",
+          "guardianmod:Defensive Mode",
+          "guardianmod:defensive mode",
+          "guardianmod:defensive_mode",
+          "guardianmod:defensive"
         ],
         "icon": null
       },
@@ -5550,7 +5710,9 @@
         "description": "Reduce the turn counter of the right-most card in #yStasis by #b1 [REMOVE_SPACE].",
         "aliases": [
           "Accelerate",
-          "accelerate"
+          "accelerate",
+          "guardianmod:Accelerate",
+          "guardianmod:accelerate"
         ],
         "icon": null
       },
@@ -5560,7 +5722,10 @@
         "aliases": [
           "Package",
           "package",
-          "packages"
+          "packages",
+          "guardianmod:Package",
+          "guardianmod:package",
+          "guardianmod:packages"
         ],
         "icon": null
       },
@@ -5569,7 +5734,9 @@
         "description": "When this card leaves #yStasis, it #yExhausts [REMOVE_SPACE].",
         "aliases": [
           "Volatile",
-          "volatile"
+          "volatile",
+          "guardianmod:Volatile",
+          "guardianmod:volatile"
         ],
         "icon": null
       },
@@ -5580,7 +5747,11 @@
           "Polishing Oil",
           "Polishing_Oil",
           "polishing_oil",
-          "polishingoil"
+          "polishingoil",
+          "guardianmod:Polishing Oil",
+          "guardianmod:Polishing_Oil",
+          "guardianmod:polishing_oil",
+          "guardianmod:polishingoil"
         ],
         "icon": null
       },
@@ -5589,7 +5760,9 @@
         "description": "When this card's #yStasis turn counter is reduced...",
         "aliases": [
           "Tick",
-          "tick"
+          "tick",
+          "guardianmod:Tick",
+          "guardianmod:tick"
         ],
         "icon": null
       },
@@ -5598,7 +5771,9 @@
         "description": "Prevent the next time you would lose HP.",
         "aliases": [
           "Buffer",
-          "buffer"
+          "buffer",
+          "guardianmod:Buffer",
+          "guardianmod:buffer"
         ],
         "icon": null
       },
@@ -5607,7 +5782,9 @@
         "description": "Reduce the HP loss required to trigger #yMode #yShift by X.",
         "aliases": [
           "Brace X",
-          "brace"
+          "brace",
+          "guardianmod:Brace X",
+          "guardianmod:brace"
         ],
         "icon": null
       },
@@ -5618,7 +5795,11 @@
           "Dead On",
           "Dead_On",
           "dead_on",
-          "deadon"
+          "deadon",
+          "hermit:Dead On",
+          "hermit:Dead_On",
+          "hermit:dead_on",
+          "hermit:deadon"
         ],
         "icon": null
       },
@@ -5630,7 +5811,12 @@
           "Concentrate",
           "concentrate",
           "concentrated",
-          "Concentrated"
+          "Concentrated",
+          "hermit:Concentration",
+          "hermit:Concentrate",
+          "hermit:concentrate",
+          "hermit:concentrated",
+          "hermit:Concentrated"
         ],
         "icon": null
       },
@@ -5640,7 +5826,10 @@
         "aliases": [
           "Bruise",
           "bruise",
-          "bruised"
+          "bruised",
+          "hermit:Bruise",
+          "hermit:bruise",
+          "hermit:bruised"
         ],
         "icon": null
       },
@@ -5649,7 +5838,9 @@
         "description": "Reduces next instance of attack damage taken to #b2 [REMOVE_SPACE].",
         "aliases": [
           "Rugged",
-          "rugged"
+          "rugged",
+          "hermit:Rugged",
+          "hermit:rugged"
         ],
         "icon": null
       },
@@ -5658,7 +5849,9 @@
         "description": "Normal Enemy: #b15 gold.      Elite Enemy: #b40 gold.            Boss: #b100 gold.",
         "aliases": [
           "Bounty",
-          "bounty"
+          "bounty",
+          "hermit:Bounty",
+          "hermit:bounty"
         ],
         "icon": null
       },
@@ -5669,7 +5862,11 @@
           "stun",
           "Stun",
           "stunned",
-          "Stunned"
+          "Stunned",
+          "hermit:stun",
+          "hermit:Stun",
+          "hermit:stunned",
+          "hermit:Stunned"
         ],
         "icon": null
       },
@@ -5678,7 +5875,9 @@
         "description": "The #yActive Ghostflame can be #yIgnited by meeting its listed Ignition requirements.",
         "aliases": [
           "Active",
-          "active"
+          "active",
+          "hexamod:Active",
+          "hexamod:active"
         ],
         "icon": null
       },
@@ -5689,7 +5888,11 @@
           "Advance",
           "advance",
           "advanced",
-          "advancing"
+          "advancing",
+          "hexamod:Advance",
+          "hexamod:advance",
+          "hexamod:advanced",
+          "hexamod:advancing"
         ],
         "icon": null
       },
@@ -5700,7 +5903,11 @@
           "Retract",
           "retract",
           "retracted",
-          "retracting"
+          "retracting",
+          "hexamod:Retract",
+          "hexamod:retract",
+          "hexamod:retracted",
+          "hexamod:retracting"
         ],
         "icon": null
       },
@@ -5709,7 +5916,9 @@
         "description": "Intensity increases the damage, #ySoulburn [REMOVE_SPACE], and #yBlock [REMOVE_SPACE] applied by Ghostflames when #yIgnited.",
         "aliases": [
           "Intensity",
-          "intensity"
+          "intensity",
+          "hexamod:Intensity",
+          "hexamod:intensity"
         ],
         "icon": null
       },
@@ -5719,7 +5928,10 @@
         "aliases": [
           "Soulburn",
           "soulburn",
-          "soulburned"
+          "soulburned",
+          "hexamod:Soulburn",
+          "hexamod:soulburn",
+          "hexamod:soulburned"
         ],
         "icon": null
       },
@@ -5729,7 +5941,10 @@
         "aliases": [
           "Extinguish",
           "extinguish",
-          "extinguished"
+          "extinguished",
+          "hexamod:Extinguish",
+          "hexamod:extinguish",
+          "hexamod:extinguished"
         ],
         "icon": null
       },
@@ -5740,7 +5955,11 @@
           "Ignite",
           "ignite",
           "ignited",
-          "force-ignite"
+          "force-ignite",
+          "hexamod:Ignite",
+          "hexamod:ignite",
+          "hexamod:ignited",
+          "hexamod:force-ignite"
         ],
         "icon": null
       },
@@ -5749,7 +5968,9 @@
         "description": "Seal cards drop from Elite combats. The more you play a Seal card, the more likely you are to find different kinds. If all #b6 Seals have been played during a combat, obtain #pThe #pBroken #pSeal and remove the #b6 Seals from your deck.",
         "aliases": [
           "Seal",
-          "seal"
+          "seal",
+          "hexamod:Seal",
+          "hexamod:seal"
         ],
         "icon": null
       },
@@ -5758,7 +5979,9 @@
         "description": "The purple effect will also trigger when this card is #yExhausted [REMOVE_SPACE].",
         "aliases": [
           "Afterlife",
-          "afterlife"
+          "afterlife",
+          "hexamod:Afterlife",
+          "hexamod:afterlife"
         ],
         "icon": null
       },
@@ -5767,7 +5990,9 @@
         "description": "#yGhostflame. #yIgnites when #b2 #ySkills are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], deal #b3 damage to a random enemy twice.",
         "aliases": [
           "Crushing",
-          "crushing"
+          "crushing",
+          "hexamod:Crushing",
+          "hexamod:crushing"
         ],
         "icon": null
       },
@@ -5776,7 +6001,9 @@
         "description": "#yGhostflame. #yIgnites when a #yPower is played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], gain #b4 #yBlock and #b1 #yStrength [REMOVE_SPACE].",
         "aliases": [
           "Bolstering",
-          "bolstering"
+          "bolstering",
+          "hexamod:Bolstering",
+          "hexamod:bolstering"
         ],
         "icon": null
       },
@@ -5785,7 +6012,9 @@
         "description": "At the end of your turn, gain #yBlock equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1.",
         "aliases": [
           "Plated Armor",
-          "plated"
+          "plated",
+          "hexamod:Plated Armor",
+          "hexamod:plated"
         ],
         "icon": null
       },
@@ -5794,7 +6023,9 @@
         "description": "#yGhostflame. #yIgnites when #b2 #yAttacks are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], apply #b3 #ySoulburn to a random enemy, twice [REMOVE_SPACE].",
         "aliases": [
           "Searing",
-          "searing"
+          "searing",
+          "hexamod:Searing",
+          "hexamod:searing"
         ],
         "icon": null
       },
@@ -5803,7 +6034,9 @@
         "description": "#yGhostflame. #yIgnites when #b3 Energy is spent when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], deal #b4 damage to a random enemy for each ignited Ghostflame. If all Ghostflames are Ignited, gain #b2 #yIntensity [REMOVE_SPACE].",
         "aliases": [
           "Inferno",
-          "inferno"
+          "inferno",
+          "hexamod:Inferno",
+          "hexamod:inferno"
         ],
         "icon": null
       },
@@ -5814,7 +6047,11 @@
           "Absorb",
           "absorb",
           "absorbing",
-          "absorbed"
+          "absorbed",
+          "slimeboundmod:Absorb",
+          "slimeboundmod:absorb",
+          "slimeboundmod:absorbing",
+          "slimeboundmod:absorbed"
         ],
         "icon": null
       },
@@ -5824,7 +6061,10 @@
         "aliases": [
           "Split",
           "split",
-          "splitting"
+          "splitting",
+          "slimeboundmod:Split",
+          "slimeboundmod:split",
+          "slimeboundmod:splitting"
         ],
         "icon": "assets/keyword-icons/Slimebound_DuplicatedFormNoHealPower_HalvedS.png"
       },
@@ -5834,7 +6074,10 @@
         "aliases": [
           "Goop",
           "goop",
-          "gooped"
+          "gooped",
+          "slimeboundmod:Goop",
+          "slimeboundmod:goop",
+          "slimeboundmod:gooped"
         ],
         "icon": "assets/keyword-icons/Slimebound_SlimedPower_SlimedS.png"
       },
@@ -5843,7 +6086,9 @@
         "description": "Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by #b1 for every #b2 Potency (rounding up).",
         "aliases": [
           "Potency",
-          "potency"
+          "potency",
+          "slimeboundmod:Potency",
+          "slimeboundmod:potency"
         ],
         "icon": "assets/keyword-icons/Slimebound_PotencyPower_potency.png"
       },
@@ -5853,7 +6098,10 @@
         "aliases": [
           "Command",
           "command",
-          "commands"
+          "commands",
+          "slimeboundmod:Command",
+          "slimeboundmod:command",
+          "slimeboundmod:commands"
         ],
         "icon": null
       },
@@ -5863,7 +6111,10 @@
         "aliases": [
           "Torch Head Slime",
           "torchhead slime",
-          "torchhead_slime"
+          "torchhead_slime",
+          "slimeboundmod:Torch Head Slime",
+          "slimeboundmod:torchhead slime",
+          "slimeboundmod:torchhead_slime"
         ],
         "icon": null
       },
@@ -5876,7 +6127,13 @@
           "bruiser_slime",
           "bruiser slimes",
           "bruiser_slimes",
-          "bruiser"
+          "bruiser",
+          "slimeboundmod:Bruiser Slime",
+          "slimeboundmod:bruiser slime",
+          "slimeboundmod:bruiser_slime",
+          "slimeboundmod:bruiser slimes",
+          "slimeboundmod:bruiser_slimes",
+          "slimeboundmod:bruiser"
         ],
         "icon": null
       },
@@ -5886,7 +6143,10 @@
         "aliases": [
           "Cultist Slime",
           "cultist slime",
-          "cultist_slime"
+          "cultist_slime",
+          "slimeboundmod:Cultist Slime",
+          "slimeboundmod:cultist slime",
+          "slimeboundmod:cultist_slime"
         ],
         "icon": null
       },
@@ -5899,7 +6159,13 @@
           "leeching_slime",
           "leeching slimes",
           "leeching_slimes",
-          "leeching"
+          "leeching",
+          "slimeboundmod:Leeching Slime",
+          "slimeboundmod:leeching slime",
+          "slimeboundmod:leeching_slime",
+          "slimeboundmod:leeching slimes",
+          "slimeboundmod:leeching_slimes",
+          "slimeboundmod:leeching"
         ],
         "icon": null
       },
@@ -5912,7 +6178,13 @@
           "guerilla_slime",
           "guerilla slimes",
           "guerilla_slimes",
-          "guerilla"
+          "guerilla",
+          "slimeboundmod:Guerilla Slime",
+          "slimeboundmod:guerilla slime",
+          "slimeboundmod:guerilla_slime",
+          "slimeboundmod:guerilla slimes",
+          "slimeboundmod:guerilla_slimes",
+          "slimeboundmod:guerilla"
         ],
         "icon": null
       },
@@ -5925,7 +6197,13 @@
           "mire_slime",
           "mire slimes",
           "mire_slimes",
-          "mire"
+          "mire",
+          "slimeboundmod:Mire Slime",
+          "slimeboundmod:mire slime",
+          "slimeboundmod:mire_slime",
+          "slimeboundmod:mire slimes",
+          "slimeboundmod:mire_slimes",
+          "slimeboundmod:mire"
         ],
         "icon": null
       },
@@ -5935,7 +6213,10 @@
         "aliases": [
           "Bronze Slime",
           "bronze slime",
-          "bronze_slime"
+          "bronze_slime",
+          "slimeboundmod:Bronze Slime",
+          "slimeboundmod:bronze slime",
+          "slimeboundmod:bronze_slime"
         ],
         "icon": null
       },
@@ -5944,7 +6225,9 @@
         "description": "0-cost cards that apply #yGoop with a variety of secondary effects.",
         "aliases": [
           "Lick",
-          "lick"
+          "lick",
+          "slimeboundmod:Lick",
+          "slimeboundmod:lick"
         ],
         "icon": null
       },
@@ -5954,7 +6237,10 @@
         "aliases": [
           "Ghostflame Slime",
           "ghostflame slime",
-          "ghostflame_slime"
+          "ghostflame_slime",
+          "slimeboundmod:Ghostflame Slime",
+          "slimeboundmod:ghostflame slime",
+          "slimeboundmod:ghostflame_slime"
         ],
         "icon": null
       },
@@ -5963,7 +6249,9 @@
         "description": "Receives #b10% more damage per card played in a turn.",
         "aliases": [
           "Slow",
-          "slow"
+          "slow",
+          "slimeboundmod:Slow",
+          "slimeboundmod:slow"
         ],
         "icon": null
       },
@@ -5973,7 +6261,10 @@
         "aliases": [
           "Tackle",
           "tackle",
-          "tackles"
+          "tackles",
+          "slimeboundmod:Tackle",
+          "slimeboundmod:tackle",
+          "slimeboundmod:tackles"
         ],
         "icon": null
       },
@@ -5983,7 +6274,10 @@
         "aliases": [
           "Spire Boss",
           "spire boss",
-          "spire_boss"
+          "spire_boss",
+          "slimeboundmod:Spire Boss",
+          "slimeboundmod:spire boss",
+          "slimeboundmod:spire_boss"
         ],
         "icon": null
       },
@@ -5993,7 +6287,10 @@
         "aliases": [
           "Spiky Slime",
           "protector slime",
-          "protector_slime"
+          "protector_slime",
+          "slimeboundmod:Spiky Slime",
+          "slimeboundmod:protector slime",
+          "slimeboundmod:protector_slime"
         ],
         "icon": null
       },
@@ -6003,7 +6300,10 @@
         "aliases": [
           "Insulting Slime",
           "insulting slime",
-          "insulting_slime"
+          "insulting_slime",
+          "slimeboundmod:Insulting Slime",
+          "slimeboundmod:insulting slime",
+          "slimeboundmod:insulting_slime"
         ],
         "icon": null
       },
@@ -6013,7 +6313,10 @@
         "aliases": [
           "Darkling Slime",
           "darkling slime",
-          "darkling_slime"
+          "darkling_slime",
+          "slimeboundmod:Darkling Slime",
+          "slimeboundmod:darkling slime",
+          "slimeboundmod:darkling_slime"
         ],
         "icon": null
       },
@@ -6023,7 +6326,10 @@
         "aliases": [
           "Ancient Slime",
           "ancient slime",
-          "ancient_slime"
+          "ancient_slime",
+          "slimeboundmod:Ancient Slime",
+          "slimeboundmod:ancient slime",
+          "slimeboundmod:ancient_slime"
         ],
         "icon": null
       },
@@ -6033,7 +6339,10 @@
         "aliases": [
           "Time Slime",
           "time slime",
-          "time_slime"
+          "time_slime",
+          "slimeboundmod:Time Slime",
+          "slimeboundmod:time slime",
+          "slimeboundmod:time_slime"
         ],
         "icon": null
       },
@@ -6042,7 +6351,9 @@
         "description": "Bonus effect which activates when an #yAttack is used on an enemy who has #yGoop [REMOVE_SPACE].",
         "aliases": [
           "Consume",
-          "consume"
+          "consume",
+          "slimeboundmod:Consume",
+          "slimeboundmod:consume"
         ],
         "icon": null
       },
@@ -6052,7 +6363,8 @@
         "aliases": [
           "Specialist",
           "specialist",
-          "specialist"
+          "slimeboundmod:Specialist",
+          "slimeboundmod:specialist"
         ],
         "icon": null
       },
@@ -6061,7 +6373,9 @@
         "description": "Buried cards will always be chosen last for random #yExhume effects.",
         "aliases": [
           "Buried",
-          "buried"
+          "buried",
+          "slimeboundmod:Buried",
+          "slimeboundmod:buried"
         ],
         "icon": null
       },
@@ -6070,7 +6384,9 @@
         "description": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled. NOTE FOR LOC: NOT USED DO NOT TRANSLATE.",
         "aliases": [
           "Snekproof",
-          "snekproof"
+          "snekproof",
+          "sneckomod:Snekproof",
+          "sneckomod:snekproof"
         ],
         "icon": null
       },
@@ -6080,7 +6396,10 @@
         "aliases": [
           "Suit",
           "suit",
-          "suits"
+          "suits",
+          "sneckomod:Suit",
+          "sneckomod:suit",
+          "sneckomod:suits"
         ],
         "icon": null
       },
@@ -6089,7 +6408,9 @@
         "description": "Overflow effects activate if you have more than #b5 cards in hand.",
         "aliases": [
           "Overflow",
-          "overflow"
+          "overflow",
+          "sneckomod:Overflow",
+          "sneckomod:overflow"
         ],
         "icon": null
       },
@@ -6100,7 +6421,11 @@
           "Muddle",
           "muddle",
           "muddled",
-          "muddles"
+          "muddles",
+          "sneckomod:Muddle",
+          "sneckomod:muddle",
+          "sneckomod:muddled",
+          "sneckomod:muddles"
         ],
         "icon": null
       },
@@ -6109,7 +6434,9 @@
         "description": "An Offclass card is any obtainable card from a class other than your own (including Colorless cards, Curses, and Statuses).",
         "aliases": [
           "Offclass",
-          "offclass"
+          "offclass",
+          "sneckomod:Offclass",
+          "sneckomod:offclass"
         ],
         "icon": null
       },
@@ -6118,7 +6445,9 @@
         "description": "When you obtain this card, get a card reward with the following card type.",
         "aliases": [
           "Gift",
-          "gift"
+          "gift",
+          "sneckomod:Gift",
+          "sneckomod:gift"
         ],
         "icon": null
       },
@@ -6127,7 +6456,9 @@
         "description": "Replace an #yUnidentified card with its current random card permanently. NOTE FOR LOC: NOT USED DO NOT TRANSLATE.",
         "aliases": [
           "Identify",
-          "identify"
+          "identify",
+          "sneckomod:Identify",
+          "sneckomod:identify"
         ],
         "icon": null
       },
@@ -6136,7 +6467,9 @@
         "description": "Creatures with #yVenom lose HP you apply a debuff that isn't #yVenom to them.",
         "aliases": [
           "Venom",
-          "venom"
+          "venom",
+          "sneckomod:Venom",
+          "sneckomod:venom"
         ],
         "icon": null
       },
@@ -6145,7 +6478,9 @@
         "description": "Overflow effects always activate this turn regardless of hand size.",
         "aliases": [
           "Lucky",
-          "lucky"
+          "lucky",
+          "sneckomod:Lucky",
+          "sneckomod:lucky"
         ],
         "icon": null
       }
@@ -6156,13 +6491,15 @@
         "description": "#y药水 [REMOVE_SPACE] : 从 #b3 张随机 #y能力牌 中选择 #b1 张加入你的手牌 ｡ 这张牌在本回合耗能变为 #b0 ｡",
         "aliases": [
           "能力药水",
-          "能力药水",
-          "能力药水",
-          "能力药水",
           "Power Potion",
           "Power_Potion",
           "power_potion",
-          "powerpotion"
+          "powerpotion",
+          "awakened:能力药水",
+          "awakened:Power Potion",
+          "awakened:Power_Potion",
+          "awakened:power_potion",
+          "awakened:powerpotion"
         ],
         "icon": null
       },
@@ -6171,11 +6508,15 @@
         "description": "从你的咒典中将下一张咒文卡加入你的手牌 ｡",
         "aliases": [
           "念咒",
-          " 念咒",
           "觉醒",
           "conjure",
           "conjured",
-          "awaken"
+          "awaken",
+          "awakened:念咒",
+          "awakened:觉醒",
+          "awakened:conjure",
+          "awakened:conjured",
+          "awakened:awaken"
         ],
         "icon": null
       },
@@ -6184,7 +6525,9 @@
         "description": "若打出含有 #y吟唱 效果的卡牌时上一张打出的卡牌为 #y能力牌 , 该效果在战斗结束前会自动激活 ｡",
         "aliases": [
           "吟唱",
-          "chant"
+          "chant",
+          "awakened:吟唱",
+          "awakened:chant"
         ],
         "icon": null
       },
@@ -6195,7 +6538,11 @@
           "Hex",
           "hex",
           "hexxed",
-          "hexx"
+          "hexx",
+          "awakened:Hex",
+          "awakened:hex",
+          "awakened:hexxed",
+          "awakened:hexx"
         ],
         "icon": null
       },
@@ -6204,9 +6551,11 @@
         "description": "任何令你失去 [E] 的效果 , [E] 为0时仍能触发（不包括打出卡牌消耗的 [E] ｡ ）",
         "aliases": [
           "力竭",
-          "力竭",
           "drain",
-          "drained"
+          "drained",
+          "awakened:力竭",
+          "awakened:drain",
+          "awakened:drained"
         ],
         "icon": null
       },
@@ -6215,7 +6564,9 @@
         "description": "任何令你失去 [E] 的效果 , 此敌人失去等同 #y灼气 [REMOVE_SPACE]层数的生命值 ｡ [E] 为0时仍能触发（不包括打出卡牌消耗的 [E] ｡ ）",
         "aliases": [
           "灼气",
-          "manaburn"
+          "manaburn",
+          "awakened:灼气",
+          "awakened:manaburn"
         ],
         "icon": null
       },
@@ -6224,7 +6575,9 @@
         "description": "你每打出一张 #y能力牌 , 获得 #b1 点 #y力量 ｡",
         "aliases": [
           "好奇",
-          "curiosity"
+          "curiosity",
+          "awakened:好奇",
+          "awakened:curiosity"
         ],
         "icon": null
       },
@@ -6236,7 +6589,12 @@
           "encoded",
           "编码",
           "队列",
-          "方法"
+          "方法",
+          "bronze:encode",
+          "bronze:encoded",
+          "bronze:编码",
+          "bronze:队列",
+          "bronze:方法"
         ],
         "icon": null
       },
@@ -6246,7 +6604,10 @@
         "aliases": [
           "编译",
           "compile",
-          "compiled"
+          "compiled",
+          "bronze:编译",
+          "bronze:compile",
+          "bronze:compiled"
         ],
         "icon": null
       },
@@ -6255,7 +6616,9 @@
         "description": " #y格挡 不会在回合结束时消失。",
         "aliases": [
           "残影",
-          "blur"
+          "blur",
+          "bronze:残影",
+          "bronze:blur"
         ],
         "icon": null
       },
@@ -6264,7 +6627,9 @@
         "description": "将 #b1 张牌加入抽牌堆。",
         "aliases": [
           "插入",
-          "insert"
+          "insert",
+          "bronze:插入",
+          "bronze:insert"
         ],
         "icon": null
       },
@@ -6273,7 +6638,9 @@
         "description": "丢弃 #b1 张牌，抽 #b1 张牌替换其原来的位置。",
         "aliases": [
           "循环",
-          "cycle"
+          "cycle",
+          "bronze:循环",
+          "bronze:cycle"
         ],
         "icon": null
       },
@@ -6288,7 +6655,13 @@
           "champ:[crown_icon]",
           "[crown_icon]",
           "奖励",
-          "技术"
+          "技术",
+          "champ:bonus",
+          "champ:bonuses",
+          "champ:technique",
+          "champ:techniques",
+          "champ:奖励",
+          "champ:技术"
         ],
         "icon": null
       },
@@ -6297,7 +6670,9 @@
         "description": "处于特定 #y姿态 才触发效果。",
         "aliases": [
           "combo",
-          "连段"
+          "连段",
+          "champ:combo",
+          "champ:连段"
         ],
         "icon": null
       },
@@ -6307,7 +6682,10 @@
         "aliases": [
           "strike",
           "strikes",
-          "打击"
+          "打击",
+          "champ:strike",
+          "champ:strikes",
+          "champ:打击"
         ],
         "icon": null
       },
@@ -6319,7 +6697,10 @@
           "finishers",
           "[fist_icon]",
           "champ:[fist_icon]",
-          "终结技"
+          "终结技",
+          "champ:finisher",
+          "champ:finishers",
+          "champ:终结技"
         ],
         "icon": null
       },
@@ -6328,7 +6709,9 @@
         "description": "下次被 #y攻击 时，失去所有 #y反击 ，并获得一张造成等量层数点伤害的 #y弹反打击 。",
         "aliases": [
           "counter",
-          "反击"
+          "反击",
+          "champ:counter",
+          "champ:反击"
         ],
         "icon": null
       },
@@ -6338,7 +6721,10 @@
         "aliases": [
           "defensive",
           "defensive.",
-          "防守"
+          "防守",
+          "champ:defensive",
+          "champ:defensive.",
+          "champ:防守"
         ],
         "icon": null
       },
@@ -6348,7 +6734,10 @@
         "aliases": [
           "berserker",
           "berserker.",
-          "战狂"
+          "战狂",
+          "champ:berserker",
+          "champ:berserker.",
+          "champ:战狂"
         ],
         "icon": null
       },
@@ -6357,7 +6746,9 @@
         "description": "弃用",
         "aliases": [
           "角斗",
-          "gladiator"
+          "gladiator",
+          "champ:角斗",
+          "champ:gladiator"
         ],
         "icon": null
       },
@@ -6366,7 +6757,9 @@
         "description": "#y姿态 。 NL 视为同时处于 #r战狂 和 #b防守 。持续时间内打出 #y终结技 将重新进入 #y终极 。",
         "aliases": [
           "ultimate",
-          "终极"
+          "终极",
+          "champ:ultimate",
+          "champ:终极"
         ],
         "icon": null
       },
@@ -6375,7 +6768,9 @@
         "description": "失去生命。 NL 战斗结束时，回复因 #y疲劳 失去的生命。 NL 你不会死于 #y疲劳 。",
         "aliases": [
           "疲劳",
-          "fatigue"
+          "fatigue",
+          "champ:疲劳",
+          "champ:fatigue"
         ],
         "icon": null
       },
@@ -6384,7 +6779,9 @@
         "description": "同时处于 #y易伤 与 #y虚弱 的单位视为处于 #y折磨 之中。",
         "aliases": [
           "afflicted",
-          "折磨"
+          "折磨",
+          "collector:afflicted",
+          "collector:折磨"
         ],
         "icon": null
       },
@@ -6394,7 +6791,10 @@
         "aliases": [
           "doom",
           "doomed",
-          "魂劫"
+          "魂劫",
+          "collector:doom",
+          "collector:doomed",
+          "collector:魂劫"
         ],
         "icon": null
       },
@@ -6403,7 +6803,9 @@
         "description": "本牌需额外 #y消耗 一张手牌才能打出。",
         "aliases": [
           "pyre",
-          "焰葬"
+          "焰葬",
+          "collector:pyre",
+          "collector:焰葬"
         ],
         "icon": null
       },
@@ -6413,7 +6815,10 @@
         "aliases": [
           "reserve",
           "reserves",
-          "储能"
+          "储能",
+          "collector:reserve",
+          "collector:reserves",
+          "collector:储能"
         ],
         "icon": null
       },
@@ -6422,7 +6827,9 @@
         "description": "回合开始时，额外从 #y收藏堆 抽一张 #y藏品 牌。 #y藏品 牌附带 #y超虚无 ，即被打出或回合结束时被 #y消耗 ，无论其位于 #y收藏堆 外的何处。",
         "aliases": [
           "collected",
-          "藏品"
+          "藏品",
+          "collector:collected",
+          "collector:藏品"
         ],
         "icon": null
       },
@@ -6431,7 +6838,9 @@
         "description": "若你有 #y临时生命 ,每次攻击时都会触发 #y火炬头 的效果。",
         "aliases": [
           "torchhead",
-          "火炬头"
+          "火炬头",
+          "collector:torchhead",
+          "collector:火炬头"
         ],
         "icon": null
       },
@@ -6440,7 +6849,9 @@
         "description": "#y格挡 在回合结束时不被移除。",
         "aliases": [
           "残影",
-          "blur"
+          "blur",
+          "expansioncontent:残影",
+          "expansioncontent:blur"
         ],
         "icon": null
       },
@@ -6448,7 +6859,8 @@
         "name": "再生",
         "description": "回合开始时，回复相应生命，失去 1 层 #y再生 。",
         "aliases": [
-          "再生"
+          "再生",
+          "expansioncontent:再生"
         ],
         "icon": null
       },
@@ -6457,7 +6869,9 @@
         "description": "回合结束时，获得相应 #y格挡 。每受到未被格挡的伤害，失去 1 层 #y多层护甲 。",
         "aliases": [
           "多层护甲",
-          "plated"
+          "plated",
+          "expansioncontent:多层护甲",
+          "expansioncontent:plated"
         ],
         "icon": null
       },
@@ -6465,7 +6879,8 @@
         "name": "首领",
         "description": "每回合只能打出 #b1 张 #y首领 牌。",
         "aliases": [
-          "首领"
+          "首领",
+          "expansioncontent:首领"
         ],
         "icon": null
       },
@@ -6473,7 +6888,8 @@
         "name": "回响",
         "description": "将 1 张牌的复制加入手牌，它有 #y虚无 和 #y消耗 。 NL #y回响 牌不能被 #y回响 。",
         "aliases": [
-          "回响"
+          "回响",
+          "expansioncontent:回响"
         ],
         "icon": null
       },
@@ -6481,7 +6897,8 @@
         "name": "发掘",
         "description": "将 #b1 张 #y消耗 堆的牌移回手牌。",
         "aliases": [
-          "发掘"
+          "发掘",
+          "expansioncontent:发掘"
         ],
         "icon": null
       },
@@ -6489,7 +6906,8 @@
         "name": "坚不可摧",
         "description": "任意 #b1 回合内你最多失去 #b10 点生命。承伤达到上限后移除本效果。叠加时，额外生效 #b1 回合。",
         "aliases": [
-          "坚不可摧"
+          "坚不可摧",
+          "expansioncontent:坚不可摧"
         ],
         "icon": null
       },
@@ -6497,7 +6915,8 @@
         "name": "取回",
         "description": "将 #b1 张 #y消耗 堆的牌移入弃牌堆。",
         "aliases": [
-          "取回"
+          "取回",
+          "expansioncontent:取回"
         ],
         "icon": null
       },
@@ -6505,7 +6924,8 @@
         "name": "黏液",
         "description": "下 1 次攻击移除所有 #y黏液  ，造成相应额外伤害并触发 #y吞食粘液 效果。",
         "aliases": [
-          "黏液"
+          "黏液",
+          "expansioncontent:黏液"
         ],
         "icon": "assets/keyword-icons/Slimebound_SlimedPower_SlimedS.png"
       },
@@ -6513,7 +6933,8 @@
         "name": "镣铐",
         "description": "带有 #y镣铐 的单位本回合失去 #y力量 。",
         "aliases": [
-          "镣铐"
+          "镣铐",
+          "expansioncontent:镣铐"
         ],
         "icon": null
       },
@@ -6521,7 +6942,8 @@
         "name": "临时生命",
         "description": "视为生命值，但战斗结束后，失去所有临时生命。",
         "aliases": [
-          "临时生命"
+          "临时生命",
+          "expansioncontent:临时生命"
         ],
         "icon": null
       },
@@ -6529,7 +6951,8 @@
         "name": "焰葬",
         "description": "除支付耗能外，还需要 消耗 1 张手牌。",
         "aliases": [
-          "焰葬"
+          "焰葬",
+          "expansioncontent:焰葬"
         ],
         "icon": null
       },
@@ -6537,7 +6960,8 @@
         "name": "魂劫",
         "description": "拥有 #y魂劫 的敌人在其回合开始时失去相应生命，若其没有 #y折磨 （同时有 #y虚弱 与 #y易伤 。），则移除所有 #y魂劫 。",
         "aliases": [
-          "魂劫"
+          "魂劫",
+          "expansioncontent:魂劫"
         ],
         "icon": null
       },
@@ -6545,7 +6969,8 @@
         "name": "吟唱",
         "description": "当 #y吟唱 牌在手牌中，打出1张能力牌再打出 #y吟唱 牌触发 #y吟唱 效果。",
         "aliases": [
-          "吟唱"
+          "吟唱",
+          "expansioncontent:吟唱"
         ],
         "icon": null
       },
@@ -6553,7 +6978,8 @@
         "name": "转化",
         "description": "#消耗 1 张牌，用 1 张不同的牌替代之。",
         "aliases": [
-          "转化"
+          "转化",
+          "expansioncontent:转化"
         ],
         "icon": null
       },
@@ -6561,7 +6987,8 @@
         "name": "剧痛",
         "description": "处于 #y剧痛 中的单位 造成的伤害减少 #b80% 。",
         "aliases": [
-          "剧痛"
+          "剧痛",
+          "gremlin:剧痛"
         ],
         "icon": null
       },
@@ -6569,7 +6996,8 @@
         "name": "致残",
         "description": "被 #y致残 的单位 #y虚弱 层数不再减少。 NL 敌方回合结束时，其失去 #y虚 #y弱 层数点生命。",
         "aliases": [
-          "致残"
+          "致残",
+          "gremlin:致残"
         ],
         "icon": null
       },
@@ -6577,7 +7005,8 @@
         "name": "回响",
         "description": "获得一张带有 #y消耗 与 #y虚无 的复制品， #y回响 牌自身无法再被 #y回响 。",
         "aliases": [
-          "回响"
+          "回响",
+          "gremlin:回响"
         ],
         "icon": null
       },
@@ -6585,7 +7014,8 @@
         "name": "胖地精",
         "description": "每当你打出一张 #y攻击 牌时，给予目标 #b1 层 #y虚弱 。",
         "aliases": [
-          "胖地精"
+          "胖地精",
+          "gremlin:胖地精"
         ],
         "icon": null
       },
@@ -6593,7 +7023,8 @@
         "name": "地精法师",
         "description": "每当你打出一张 #y技能 牌时，获得 #b1 层 #y法力 。",
         "aliases": [
-          "地精法师"
+          "地精法师",
+          "gremlin:地精法师"
         ],
         "icon": null
       },
@@ -6601,7 +7032,8 @@
         "name": "火大地精",
         "description": "每当你被攻击时，获得 #b2 层 #y临时力量 。",
         "aliases": [
-          "火大地精"
+          "火大地精",
+          "gremlin:火大地精"
         ],
         "icon": null
       },
@@ -6609,7 +7041,8 @@
         "name": "持盾地精",
         "description": "每当你打出一张 #y技能 牌时，获得 #b2 点 #y格挡 。",
         "aliases": [
-          "持盾地精"
+          "持盾地精",
+          "gremlin:持盾地精"
         ],
         "icon": null
       },
@@ -6617,7 +7050,8 @@
         "name": "卑鄙地精",
         "description": "每当你打出一张 #y攻击 牌时，随机对一名敌人造成 #b3 点伤害。",
         "aliases": [
-          "卑鄙地精"
+          "卑鄙地精",
+          "gremlin:卑鄙地精"
         ],
         "icon": null
       },
@@ -6627,7 +7061,10 @@
         "aliases": [
           "swap",
           "切换",
-          "领队"
+          "领队",
+          "gremlin:swap",
+          "gremlin:切换",
+          "gremlin:领队"
         ],
         "icon": null
       },
@@ -6635,7 +7072,8 @@
         "name": "法力",
         "description": "当你至少有 #b3 层 #y法力 时， 攻击会使用所有 #y法力 并额外造成 #b7 点伤害。",
         "aliases": [
-          "法力"
+          "法力",
+          "gremlin:法力"
         ],
         "icon": null
       },
@@ -6643,7 +7081,8 @@
         "name": "窃取",
         "description": "目标失去相应层数效果。你获得相应层数效果。",
         "aliases": [
-          "窃取"
+          "窃取",
+          "gremlin:窃取"
         ],
         "icon": null
       },
@@ -6652,7 +7091,9 @@
         "description": "你的回合开始时，获得 #y怒吼 、 #y颅骨重击 与 #y冲锋 各 #b1 张。",
         "aliases": [
           "地精大块头",
-          "大块头"
+          "大块头",
+          "gremlin:地精大块头",
+          "gremlin:大块头"
         ],
         "icon": null
       },
@@ -6660,7 +7101,8 @@
         "name": "镶嵌",
         "description": " #y宝石 能够被 #y镶嵌 进有 #y孔位 的牌上，使其效果附加于牌。",
         "aliases": [
-          "镶嵌"
+          "镶嵌",
+          "guardianmod:镶嵌"
         ],
         "icon": null
       },
@@ -6669,13 +7111,15 @@
         "description": "#y药水 [REMOVE_SPACE]: 获得 #b16 点 #y格挡 [REMOVE_SPACE]。 进入 #y防御模式 [REMOVE_SPACE]。",
         "aliases": [
           "抛光油",
-          "抛光油",
-          "抛光油",
-          "抛光油",
           "Polishing Oil",
           "Polishing_Oil",
           "polishing_oil",
-          "polishingoil"
+          "polishingoil",
+          "guardianmod:抛光油",
+          "guardianmod:Polishing Oil",
+          "guardianmod:Polishing_Oil",
+          "guardianmod:polishing_oil",
+          "guardianmod:polishingoil"
         ],
         "icon": null
       },
@@ -6683,7 +7127,8 @@
         "name": "凝滞",
         "description": "省流：过几回合免费打出。 NL 一张牌被 #y凝滞 时其获得一个计数器。倒计点数等于其耗能加 #b1 点，每回合开始时减少 #b1 点。 NL 归零时，将其返回手牌且单次耗能为 #b0 。",
         "aliases": [
-          "凝滞"
+          "凝滞",
+          "guardianmod:凝滞"
         ],
         "icon": null
       },
@@ -6691,7 +7136,8 @@
         "name": "宝石",
         "description": " #y宝石 能在 #y休息处 被 #y镶嵌 至有 #y孔位 的牌上。不能被 #y升级 。",
         "aliases": [
-          "宝石"
+          "宝石",
+          "guardianmod:宝石"
         ],
         "icon": null
       },
@@ -6699,7 +7145,8 @@
         "name": "防御模式",
         "description": "#y姿态 。 NL 当你进入 #y防御模式 ，获得 #b16 点 #y格挡 。 NL 处于 #y防御模式 时：拥有 #b3 层 #y荆棘，在回合结束时 #y格挡 不会消失。",
         "aliases": [
-          "防御模式"
+          "防御模式",
+          "guardianmod:防御模式"
         ],
         "icon": null
       },
@@ -6707,7 +7154,8 @@
         "name": "加速",
         "description": "降低最右端被 #y凝滞 牌的倒计点数 #b1 点。若归零, 将其返回手牌且单次耗能为 #b0 。",
         "aliases": [
-          "加速"
+          "加速",
+          "guardianmod:加速"
         ],
         "icon": null
       },
@@ -6715,7 +7163,8 @@
         "name": "组件",
         "description": "一系列 #b0 耗能 消耗 技能牌，可将 #b3 张同体系牌加入手牌。",
         "aliases": [
-          "组件"
+          "组件",
+          "guardianmod:组件"
         ],
         "icon": null
       },
@@ -6723,7 +7172,8 @@
         "name": "临时",
         "description": "只持续 #b1 回合，即同时获得等量层，回合结束时剥夺增益的 #r负面效果 。",
         "aliases": [
-          "临时"
+          "临时",
+          "guardianmod:临时"
         ],
         "icon": null
       },
@@ -6732,7 +7182,9 @@
         "description": "本牌结束 #y凝滞 时，被 #y消耗 而非返回手牌。",
         "aliases": [
           "消散",
-          "挥发"
+          "挥发",
+          "guardianmod:消散",
+          "guardianmod:挥发"
         ],
         "icon": null
       },
@@ -6740,7 +7192,8 @@
         "name": "滴答",
         "description": "被 #y凝滞 牌倒计点数减少时，触发该效果。",
         "aliases": [
-          "滴答"
+          "滴答",
+          "guardianmod:滴答"
         ],
         "icon": null
       },
@@ -6748,7 +7201,8 @@
         "name": "缓冲",
         "description": "阻止你下次失去生命。",
         "aliases": [
-          "缓冲"
+          "缓冲",
+          "guardianmod:缓冲"
         ],
         "icon": null
       },
@@ -6756,7 +7210,8 @@
         "name": "提防",
         "description": "降低进入 #y防御模式 所需生命损失，需求变为 #b0 时直接进入。",
         "aliases": [
-          "提防"
+          "提防",
+          "guardianmod:提防"
         ],
         "icon": null
       },
@@ -6768,7 +7223,12 @@
           "Dead On",
           "Dead_On",
           "dead_on",
-          "deadon"
+          "deadon",
+          "hermit:精准",
+          "hermit:Dead On",
+          "hermit:Dead_On",
+          "hermit:dead_on",
+          "hermit:deadon"
         ],
         "icon": null
       },
@@ -6780,7 +7240,12 @@
           "Concentrate",
           "concentrate",
           "concentrated",
-          "Concentrated"
+          "Concentrated",
+          "hermit:专注",
+          "hermit:Concentrate",
+          "hermit:concentrate",
+          "hermit:concentrated",
+          "hermit:Concentrated"
         ],
         "icon": null
       },
@@ -6790,7 +7255,10 @@
         "aliases": [
           "bruise",
           "bruised",
-          "瘀伤"
+          "瘀伤",
+          "hermit:bruise",
+          "hermit:bruised",
+          "hermit:瘀伤"
         ],
         "icon": null
       },
@@ -6799,7 +7267,9 @@
         "description": "降低下次敌方攻击造成的生命损失至 #b2 点。",
         "aliases": [
           "rugged",
-          "坚固"
+          "坚固",
+          "hermit:rugged",
+          "hermit:坚固"
         ],
         "icon": null
       },
@@ -6807,7 +7277,8 @@
         "name": "赏金",
         "description": "普通怪物： #b15 金币。 NL 精英怪物： #b40 金币。 NL 首领怪物： #b100 金币。",
         "aliases": [
-          "赏金"
+          "赏金",
+          "hermit:赏金"
         ],
         "icon": null
       },
@@ -6819,7 +7290,12 @@
           "stun",
           "Stun",
           "stunned",
-          "Stunned"
+          "Stunned",
+          "hermit:击晕",
+          "hermit:stun",
+          "hermit:Stun",
+          "hermit:stunned",
+          "hermit:Stunned"
         ],
         "icon": null
       },
@@ -6827,7 +7303,8 @@
         "name": "步进",
         "description": "跳至下枚鬼火，若已被 #y点燃 则 #y熄灭 它。",
         "aliases": [
-          "步进"
+          "步进",
+          "hexamod:步进"
         ],
         "icon": null
       },
@@ -6835,7 +7312,8 @@
         "name": "回退",
         "description": "跳至上枚鬼火，若已被 #y点燃 则 #y熄灭 它。",
         "aliases": [
-          "回退"
+          "回退",
+          "hexamod:回退"
         ],
         "icon": null
       },
@@ -6843,7 +7321,8 @@
         "name": "热烈",
         "description": "提高鬼火 #y点燃 效果提供的伤害、 #y灼魂 、 #y格挡 ，以及 #y预见 量。",
         "aliases": [
-          "热烈"
+          "热烈",
+          "hexamod:热烈"
         ],
         "icon": null
       },
@@ -6852,7 +7331,9 @@
         "description": " #b3 回合后 #y灼魂 将引爆，使目标失去其 #y灼魂 层数点生命。",
         "aliases": [
           "灼魂",
-          "soulburn"
+          "soulburn",
+          "hexamod:灼魂",
+          "hexamod:soulburn"
         ],
         "icon": null
       },
@@ -6860,7 +7341,8 @@
         "name": "熄灭",
         "description": "重置 #y点燃 条件，使得鬼火能被重新 #y点燃 。",
         "aliases": [
-          "熄灭"
+          "熄灭",
+          "hexamod:熄灭"
         ],
         "icon": null
       },
@@ -6870,7 +7352,10 @@
         "aliases": [
           "ignite",
           "force-ignite",
-          "点燃"
+          "点燃",
+          "hexamod:ignite",
+          "hexamod:force-ignite",
+          "hexamod:点燃"
         ],
         "icon": null
       },
@@ -6879,7 +7364,9 @@
         "description": "每当你打出一张 #y封印 时，发现未获得 #y封印 的概率将增加。若一场战斗所有 #b6 种 #y封印 均被打出，获得 #p挣破的封印 并将打出的 #y封印 移出牌组。",
         "aliases": [
           "封印",
-          "seal"
+          "seal",
+          "hexamod:封印",
+          "hexamod:seal"
         ],
         "icon": null
       },
@@ -6887,7 +7374,8 @@
         "name": "阴世",
         "description": "本牌被打出或被 #y消耗 均会触发粉色效果。",
         "aliases": [
-          "阴世"
+          "阴世",
+          "hexamod:阴世"
         ],
         "icon": null
       },
@@ -6895,7 +7383,8 @@
         "name": "碾压",
         "description": "#y鬼火 。 NL 停留时打出 #b2 张 技能牌 #y点燃 。 NL #y点燃 ：随机对敌人造成 #b6 点伤害。",
         "aliases": [
-          "碾压"
+          "碾压",
+          "hexamod:碾压"
         ],
         "icon": null
       },
@@ -6903,7 +7392,8 @@
         "name": "高热",
         "description": "#y鬼火 。 NL 停留时打出 #b1 张 能力牌 #y点燃 。 NL #y点燃 ：获得 #b4 点 #y格挡 与 #b1 点 #y力量 。",
         "aliases": [
-          "高热"
+          "高热",
+          "hexamod:高热"
         ],
         "icon": null
       },
@@ -6911,7 +7401,8 @@
         "name": "灼热",
         "description": "#y鬼火 。 NL 停留时打出 #b2 张 攻击牌 #y点燃 。 NL #y点燃 ：随机给予一名敌人 #b6 层 #y灼魂 ，该效果发挥 #b2 倍 #y热烈 。",
         "aliases": [
-          "灼热"
+          "灼热",
+          "hexamod:灼热"
         ],
         "icon": null
       },
@@ -6919,7 +7410,8 @@
         "name": "狱焱",
         "description": "#y鬼火 。 NL 停留时使用 #b3 点 能量 #y点燃 。 NL #y点燃 ：每有 #b1 枚 #y点燃 的 #y鬼火 ，随机对敌人造成 #b4 点伤害。之后 #y熄灭 其他 #y鬼火 。",
         "aliases": [
-          "狱焱"
+          "狱焱",
+          "hexamod:狱焱"
         ],
         "icon": null
       },
@@ -6930,7 +7422,11 @@
           "吸收",
           "absorb",
           "absorbing",
-          "absorbed"
+          "absorbed",
+          "slimeboundmod:吸收",
+          "slimeboundmod:absorb",
+          "slimeboundmod:absorbing",
+          "slimeboundmod:absorbed"
         ],
         "icon": null
       },
@@ -6940,7 +7436,10 @@
         "aliases": [
           "分裂",
           "split",
-          "splitting"
+          "splitting",
+          "slimeboundmod:分裂",
+          "slimeboundmod:split",
+          "slimeboundmod:splitting"
         ],
         "icon": "assets/keyword-icons/Slimebound_DuplicatedFormNoHealPower_HalvedS.png"
       },
@@ -6950,7 +7449,10 @@
         "aliases": [
           "黏液",
           "goop",
-          "gooped"
+          "gooped",
+          "slimeboundmod:黏液",
+          "slimeboundmod:goop",
+          "slimeboundmod:gooped"
         ],
         "icon": "assets/keyword-icons/Slimebound_SlimedPower_SlimedS.png"
       },
@@ -6959,7 +7461,9 @@
         "description": "强化 #y分裂 的 #y史莱姆 的攻击伤害与附加效果。附加效果只有 #b50% 强化效率。",
         "aliases": [
           "潜力",
-          "potency"
+          "potency",
+          "slimeboundmod:潜力",
+          "slimeboundmod:potency"
         ],
         "icon": "assets/keyword-icons/Slimebound_PotencyPower_potency.png"
       },
@@ -6969,7 +7473,10 @@
         "aliases": [
           "命令",
           "command",
-          "commands"
+          "commands",
+          "slimeboundmod:命令",
+          "slimeboundmod:command",
+          "slimeboundmod:commands"
         ],
         "icon": null
       },
@@ -6979,7 +7486,10 @@
         "aliases": [
           "火炬头史莱姆",
           "torchhead slime",
-          "torchhead_slime"
+          "torchhead_slime",
+          "slimeboundmod:火炬头史莱姆",
+          "slimeboundmod:torchhead slime",
+          "slimeboundmod:torchhead_slime"
         ],
         "icon": null
       },
@@ -6992,7 +7502,13 @@
           "bruiser_slime",
           "bruiser slimes",
           "bruiser_slimes",
-          "bruiser"
+          "bruiser",
+          "slimeboundmod:好斗史莱姆",
+          "slimeboundmod:bruiser slime",
+          "slimeboundmod:bruiser_slime",
+          "slimeboundmod:bruiser slimes",
+          "slimeboundmod:bruiser_slimes",
+          "slimeboundmod:bruiser"
         ],
         "icon": null
       },
@@ -7002,7 +7518,10 @@
         "aliases": [
           "邪教徒史莱姆",
           "cultist slime",
-          "cultist_slime"
+          "cultist_slime",
+          "slimeboundmod:邪教徒史莱姆",
+          "slimeboundmod:cultist slime",
+          "slimeboundmod:cultist_slime"
         ],
         "icon": null
       },
@@ -7015,7 +7534,13 @@
           "leeching_slime",
           "leeching slimes",
           "leeching_slimes",
-          "leeching"
+          "leeching",
+          "slimeboundmod:水蛭史莱姆",
+          "slimeboundmod:leeching slime",
+          "slimeboundmod:leeching_slime",
+          "slimeboundmod:leeching slimes",
+          "slimeboundmod:leeching_slimes",
+          "slimeboundmod:leeching"
         ],
         "icon": null
       },
@@ -7028,7 +7553,13 @@
           "guerilla_slime",
           "guerilla slimes",
           "guerilla_slimes",
-          "guerilla"
+          "guerilla",
+          "slimeboundmod:游击史莱姆",
+          "slimeboundmod:guerilla slime",
+          "slimeboundmod:guerilla_slime",
+          "slimeboundmod:guerilla slimes",
+          "slimeboundmod:guerilla_slimes",
+          "slimeboundmod:guerilla"
         ],
         "icon": null
       },
@@ -7041,7 +7572,13 @@
           "mire_slime",
           "mire slimes",
           "mire_slimes",
-          "mire"
+          "mire",
+          "slimeboundmod:污泥史莱姆",
+          "slimeboundmod:mire slime",
+          "slimeboundmod:mire_slime",
+          "slimeboundmod:mire slimes",
+          "slimeboundmod:mire_slimes",
+          "slimeboundmod:mire"
         ],
         "icon": null
       },
@@ -7051,7 +7588,10 @@
         "aliases": [
           "青铜史莱姆",
           "bronze slime",
-          "bronze_slime"
+          "bronze_slime",
+          "slimeboundmod:青铜史莱姆",
+          "slimeboundmod:bronze slime",
+          "slimeboundmod:bronze_slime"
         ],
         "icon": null
       },
@@ -7061,7 +7601,10 @@
         "aliases": [
           "舔舔",
           "舔",
-          "lick"
+          "lick",
+          "slimeboundmod:舔舔",
+          "slimeboundmod:舔",
+          "slimeboundmod:lick"
         ],
         "icon": null
       },
@@ -7071,7 +7614,10 @@
         "aliases": [
           "鬼火史莱姆",
           "ghostflame slime",
-          "ghostflame_slime"
+          "ghostflame_slime",
+          "slimeboundmod:鬼火史莱姆",
+          "slimeboundmod:ghostflame slime",
+          "slimeboundmod:ghostflame_slime"
         ],
         "icon": null
       },
@@ -7080,7 +7626,9 @@
         "description": "一回合内每打出一张牌额外受到 10% 的伤害。",
         "aliases": [
           "缓慢",
-          "slow"
+          "slow",
+          "slimeboundmod:缓慢",
+          "slimeboundmod:slow"
         ],
         "icon": null
       },
@@ -7090,7 +7638,10 @@
         "aliases": [
           "冲撞",
           "tackle",
-          "tackles"
+          "tackles",
+          "slimeboundmod:冲撞",
+          "slimeboundmod:tackle",
+          "slimeboundmod:tackles"
         ],
         "icon": null
       },
@@ -7100,7 +7651,10 @@
         "aliases": [
           "尖塔首领",
           "spire boss",
-          "spire_boss"
+          "spire_boss",
+          "slimeboundmod:尖塔首领",
+          "slimeboundmod:spire boss",
+          "slimeboundmod:spire_boss"
         ],
         "icon": null
       },
@@ -7110,7 +7664,10 @@
         "aliases": [
           "尖刺史莱姆",
           "protector slime",
-          "protector_slime"
+          "protector_slime",
+          "slimeboundmod:尖刺史莱姆",
+          "slimeboundmod:protector slime",
+          "slimeboundmod:protector_slime"
         ],
         "icon": null
       },
@@ -7120,7 +7677,10 @@
         "aliases": [
           "嘲讽史莱姆",
           "insulting slime",
-          "insulting_slime"
+          "insulting_slime",
+          "slimeboundmod:嘲讽史莱姆",
+          "slimeboundmod:insulting slime",
+          "slimeboundmod:insulting_slime"
         ],
         "icon": null
       },
@@ -7130,7 +7690,10 @@
         "aliases": [
           "小黑史莱姆",
           "darkling slime",
-          "darkling_slime"
+          "darkling_slime",
+          "slimeboundmod:小黑史莱姆",
+          "slimeboundmod:darkling slime",
+          "slimeboundmod:darkling_slime"
         ],
         "icon": null
       },
@@ -7140,7 +7703,10 @@
         "aliases": [
           "先古史莱姆",
           "ancient slime",
-          "ancient_slime"
+          "ancient_slime",
+          "slimeboundmod:先古史莱姆",
+          "slimeboundmod:ancient slime",
+          "slimeboundmod:ancient_slime"
         ],
         "icon": null
       },
@@ -7150,7 +7716,10 @@
         "aliases": [
           "时间史莱姆",
           "time slime",
-          "time_slime"
+          "time_slime",
+          "slimeboundmod:时间史莱姆",
+          "slimeboundmod:time slime",
+          "slimeboundmod:time_slime"
         ],
         "icon": null
       },
@@ -7159,7 +7728,9 @@
         "description": "当 #y攻击 带有 #y黏液 的敌人时可触发的额外效果。",
         "aliases": [
           "吞食黏液",
-          "consume"
+          "consume",
+          "slimeboundmod:吞食黏液",
+          "slimeboundmod:consume"
         ],
         "icon": null
       },
@@ -7169,7 +7740,8 @@
         "aliases": [
           "专家史莱姆",
           "specialist",
-          "specialist"
+          "slimeboundmod:专家史莱姆",
+          "slimeboundmod:specialist"
         ],
         "icon": null
       },
@@ -7178,7 +7750,9 @@
         "description": "被 #y发掘 的优先级最低。",
         "aliases": [
           "深埋",
-          "buried"
+          "buried",
+          "slimeboundmod:深埋",
+          "slimeboundmod:buried"
         ],
         "icon": null
       },
@@ -7187,7 +7761,9 @@
         "description": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled. NOTE FOR LOC: 不用翻译。",
         "aliases": [
           "Snekproof",
-          "snekproof"
+          "snekproof",
+          "sneckomod:Snekproof",
+          "sneckomod:snekproof"
         ],
         "icon": null
       },
@@ -7197,7 +7773,10 @@
         "aliases": [
           "Suit",
           "suit",
-          "suits"
+          "suits",
+          "sneckomod:Suit",
+          "sneckomod:suit",
+          "sneckomod:suits"
         ],
         "icon": null
       },
@@ -7207,7 +7786,10 @@
         "aliases": [
           "Overflow",
           "overflow",
-          "溢出"
+          "溢出",
+          "sneckomod:Overflow",
+          "sneckomod:overflow",
+          "sneckomod:溢出"
         ],
         "icon": null
       },
@@ -7218,7 +7800,11 @@
           "muddle",
           "muddled",
           "muddles",
-          "混淆"
+          "混淆",
+          "sneckomod:muddle",
+          "sneckomod:muddled",
+          "sneckomod:muddles",
+          "sneckomod:混淆"
         ],
         "icon": null
       },
@@ -7227,7 +7813,9 @@
         "description": "异蛇牌以外的所有可获得牌。（包括 #y诅咒 和 #y状态 牌）",
         "aliases": [
           "offclass",
-          "异色"
+          "异色",
+          "sneckomod:offclass",
+          "sneckomod:异色"
         ],
         "icon": null
       },
@@ -7236,7 +7824,9 @@
         "description": "当你获得这张牌，可获得以下 异色 牌奖励（甚至金币）。",
         "aliases": [
           "gift",
-          "赠礼"
+          "赠礼",
+          "sneckomod:gift",
+          "sneckomod:赠礼"
         ],
         "icon": null
       },
@@ -7245,7 +7835,9 @@
         "description": "Replace an #yUnidentified card with its current random card permanently. NOTE FOR LOC: 不用翻译",
         "aliases": [
           "Identify",
-          "identify"
+          "identify",
+          "sneckomod:Identify",
+          "sneckomod:identify"
         ],
         "icon": null
       },
@@ -7254,7 +7846,9 @@
         "description": "拥有 #y剧毒 的敌人获得非 #y剧毒 的负面效果时，失去对应生命。",
         "aliases": [
           "venom",
-          "剧毒"
+          "剧毒",
+          "sneckomod:venom",
+          "sneckomod:剧毒"
         ],
         "icon": null
       },
@@ -7263,7 +7857,9 @@
         "description": "溢出效果一定触发，与手牌大小无关。",
         "aliases": [
           "lucky",
-          "幸运"
+          "幸运",
+          "sneckomod:lucky",
+          "sneckomod:幸运"
         ],
         "icon": null
       }

@@ -329,12 +329,33 @@ function renderNumericMarkers(text) {
     .replace(/__TV__(-?\d+)__/g, '<span class="kw-mark-blue">$1</span>');
 }
 
+function splitLeadingNumberToken(token) {
+  const raw = String(token || "");
+  const match = /^(-?\d+(?:\.\d+)?)(.*)$/.exec(raw);
+  if (!match) {
+    return { colored: raw, rest: "" };
+  }
+  return {
+    colored: match[1] || "",
+    rest: match[2] || "",
+  };
+}
+
 function preserveLegacyColorMarkers(text) {
   if (!text) return "";
   return text
-    .replace(/#b\s*([^\s<]+)/g, "__BLUE__$1__")
-    .replace(/#r\s*([^\s<]+)/g, "__RED__$1__")
-    .replace(/#p\s*([^\s<]+)/g, "__PURPLE__$1__");
+    .replace(/#b\s*([^\s<]+)/g, (_full, token) => {
+      const split = splitLeadingNumberToken(token);
+      return `__BLUE__${split.colored}__${split.rest}`;
+    })
+    .replace(/#r\s*([^\s<]+)/g, (_full, token) => {
+      const split = splitLeadingNumberToken(token);
+      return `__RED__${split.colored}__${split.rest}`;
+    })
+    .replace(/#p\s*([^\s<]+)/g, (_full, token) => {
+      const split = splitLeadingNumberToken(token);
+      return `__PURPLE__${split.colored}__${split.rest}`;
+    });
 }
 
 function renderLegacyColorMarkers(text) {
@@ -689,11 +710,12 @@ function buildBaseKeywordIndex() {
   state.baseKeywordTerms.zh = [...zhTerms].sort((a, b) => b.length - a.length);
 }
 
-function renderKeywordSpan(label) {
+function renderKeywordSpan(label, alias = null) {
   const rawLabel = label || "";
   const displayLabel = rawLabel.replace(/_/g, " ");
   const text = escapeHtml(displayLabel);
-  const aliasAttr = rawLabel === displayLabel ? "" : ` data-kw-alias="${escapeHtml(rawLabel)}"`;
+  const aliasValue = alias || rawLabel;
+  const aliasAttr = aliasValue ? ` data-kw-alias="${escapeHtml(aliasValue)}"` : "";
   return `<span class="kw"${aliasAttr}>${text}</span>`;
 }
 
@@ -751,6 +773,7 @@ function formatTooltipDescriptionText(rawText, cardContext) {
   text = highlightSocketPlaceholders(text);
   text = renderNumericMarkers(text);
   text = text.replace(/#([ybrp])\s*([^\s<]+)/g, (_full, colorToken, word) => {
+    const split = splitLeadingNumberToken(word);
     const cls = colorToken === "y"
       ? "kw-mark-yellow"
       : colorToken === "b"
@@ -758,7 +781,7 @@ function formatTooltipDescriptionText(rawText, cardContext) {
         : colorToken === "r"
           ? "kw-mark-red"
           : "kw-mark-purple";
-    return `<span class="${cls}">${word}</span>`;
+    return `<span class="${cls}">${split.colored}</span>${split.rest}`;
   });
   text = renderBracketColorSyntax(text);
   text = attachAfterlifeHover(text);
@@ -909,7 +932,16 @@ function bindKeywordTooltipEvents() {
     const label = alias || (kw.textContent || "").trim();
     const cardNode = kw.closest("article.card[data-card-id]");
     const renderLang = getCardRenderLang(cardNode);
-    const entry = withTempLang(renderLang, () => findKeywordEntry(label) || getHardcodedKeywordEntry(label));
+    const entry = withTempLang(renderLang, () => {
+      let found = findKeywordEntry(label) || getHardcodedKeywordEntry(label);
+      if (!found && label.includes(":")) {
+        const local = label.split(":").pop().trim();
+        if (local) {
+          found = findKeywordEntry(local) || getHardcodedKeywordEntry(local);
+        }
+      }
+      return found;
+    });
     if (!entry || !entry.description) {
       hideKeywordTooltip();
       return;
@@ -997,19 +1029,77 @@ function bindCardReferencePreviewEvents() {
 
 function shouldHighlightPrefixedNoun(noun, hasKeywordEntry) {
   if (!noun || noun.length < 2) return false;
-  return Boolean(hasKeywordEntry);
+  if (hasKeywordEntry) return true;
+  return true;
+}
+
+function findPrefixedKeyword(prefix, noun) {
+  if (!noun) return null;
+  const candidates = [
+    noun,
+    `${prefix}:${noun}`,
+    `${String(prefix || "").toLowerCase()}:${noun}`,
+  ];
+
+  for (const alias of candidates) {
+    const entry = findKeywordEntry(alias);
+    if (entry) {
+      return { entry, alias, matchedLabel: noun, rest: "" };
+    }
+  }
+
+  if (state.lang === "zh") {
+    const localEntry = findKeywordEntry(noun);
+    if (localEntry) {
+      return { entry: localEntry, alias: `${prefix}:${noun}`, matchedLabel: noun, rest: "" };
+    }
+  }
+
+  // Compact zh descriptions may concatenate text after a namespaced keyword.
+  // Match the longest known alias prefix under the same namespace.
+  const map = state.keywordByLang[state.lang] || new Map();
+  let best = null;
+  const normalizedPrefix = String(prefix || "").toLowerCase();
+  for (const [alias, entry] of map.entries()) {
+    if (!alias || !entry) continue;
+    const aliasText = String(alias);
+    const colon = aliasText.indexOf(":");
+    if (colon < 0) continue;
+    const aliasPrefix = aliasText.slice(0, colon).toLowerCase();
+    if (aliasPrefix !== normalizedPrefix) continue;
+    const local = aliasText.slice(colon + 1);
+    if (!local || !noun.startsWith(local)) continue;
+    if (!best || local.length > best.matchedLabel.length) {
+      best = {
+        entry,
+        alias: aliasText,
+        matchedLabel: local,
+        rest: noun.slice(local.length),
+      };
+    }
+  }
+
+  if (best) return best;
+
+  return null;
 }
 
 function highlightPrefixedKeywords(text) {
   if (!text) return "";
   return withProtectedCardNameRefs(text, (input) => {
     const prefixedPattern = /([A-Za-z_][\w]*):([^\s<>{}\[\]，。｡,.!！？:：;；]+)/g;
-    let rendered = input.replace(prefixedPattern, (_full, _prefix, noun) => {
-      const entry = findKeywordEntry(noun);
-      if (!shouldHighlightPrefixedNoun(noun, Boolean(entry))) {
+    let rendered = input.replace(prefixedPattern, (_full, prefix, noun) => {
+      const matched = findPrefixedKeyword(prefix, noun);
+      if (!matched) {
+        if (!shouldHighlightPrefixedNoun(noun, false)) {
+          return _full;
+        }
+        return renderKeywordSpan(noun, `${prefix}:${noun}`);
+      }
+      if (!shouldHighlightPrefixedNoun(noun, Boolean(matched.entry))) {
         return _full;
       }
-      return renderKeywordSpan(noun);
+      return `${renderKeywordSpan(matched.matchedLabel, matched.alias)}${escapeHtml(matched.rest || "")}`;
     });
     if (state.lang === "zh") {
       // Remove spaces around highlighted keyword in zh mode.

@@ -192,11 +192,29 @@ function escapeHtml(text) {
     .replace(/'/g, "&#39;");
 }
 
+function splitLeadingNumberToken(token) {
+  const raw = String(token || "");
+  const match = /^(-?\d+(?:\.\d+)?)(.*)$/.exec(raw);
+  if (!match) {
+    return { colored: raw, rest: "" };
+  }
+  return {
+    colored: match[1] || "",
+    rest: match[2] || "",
+  };
+}
+
 function normalizeDescText(text) {
   const normalized = (text || "")
     .replace(/\s*\[REMOVE_SPACE\]\s*/g, "")
-    .replace(/#b\s*([^\s]+)/g, "[[BLUE:$1]]")
-    .replace(/#r\s*([^\s]+)/g, "[[RED:$1]]")
+    .replace(/#b\s*([^\s]+)/g, (_full, token) => {
+      const split = splitLeadingNumberToken(token);
+      return `[[BLUE:${split.colored}]]${split.rest}`;
+    })
+    .replace(/#r\s*([^\s]+)/g, (_full, token) => {
+      const split = splitLeadingNumberToken(token);
+      return `[[RED:${split.colored}]]${split.rest}`;
+    })
     .replace(/#[ygp]/g, "")
     .replace(/\s+/g, " ")
     .trim();
@@ -451,7 +469,10 @@ function highlightPrefixedKeywords(text) {
   const prefixedPattern = /([A-Za-z_][\w]*):([^\s<>{}\[\]，。｡,.!！？:：;；]+)/g;
   return text.replace(prefixedPattern, (_full, prefix, noun) => {
     const matched = findPrefixedKeyword(prefix, noun);
-    if (!matched) return _full;
+    if (!matched) {
+      if (!noun || noun.length < 2) return _full;
+      return renderKeywordSpan(noun, `${prefix}:${noun}`);
+    }
     return `${renderKeywordSpan(matched.matchedLabel, matched.alias)}${escapeHtml(matched.rest || "")}`;
   });
 }
